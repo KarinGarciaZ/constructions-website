@@ -1,5 +1,5 @@
 .content-layout {
-  grid-column: sidebar-end / -1;
-  min-height: 6vh;
-  background-color: purple;
+  grid-column: 1 / -1;
+  min-height: 88vh;
+  background-color: $color-primary-light-5;
 }
