@@ -1,7 +1,43 @@
 .header {
   grid-column: 1 / -1;
+  grid-row: 1 / 2;
   min-height: 6vh;
   background-color: $color-secondary-light;
   position: sticky;
   top: 0;
+
+  display: grid;
+  grid-template-columns: 1fr repeat(3, max-content);
+  grid-column-gap: 5rem;
+
+  padding: 2.2rem 10rem;
+  text-transform: capitalize;  
+}
+
+.transparent { 
+  background-color: #FFFFFF11;
+  padding: 3rem 10rem;
+}
+
+.company {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-column-gap: 2rem;
+
+  &__logo {
+    max-height: 100%;
+  }
+
+  &__name {    
+    color: white;
+    font-size: 2rem;
+    margin-left: 3rem;
+  }
+}
+
+.nav {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
 }
