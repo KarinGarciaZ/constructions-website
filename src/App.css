@@ -28,8 +28,7 @@ body {
 
 .content-layout {
   grid-column: 1 / -1;
-  min-height: 88vh;
-  background-color: #FEFEFE; }
+  min-height: 94vh; }
 
 .footer {
   grid-column: 1 / -1;
@@ -39,4 +38,4 @@ body {
 .home {
   grid-column: 1 / -1;
   min-height: 200vh;
-  background-color: greenyellow; }
+  background-color: #FEFEFE; }
