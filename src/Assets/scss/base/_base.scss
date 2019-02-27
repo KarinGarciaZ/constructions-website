@@ -50,9 +50,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: repeat(3, min-content);
+  grid-template-rows: repeat(2, min-content);
   grid-template-columns:
-    [full-start] minmax(2rem, 1fr) 
-    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) 
-    [center-end] minmax(2rem, 1fr) [full-end];
+    [full-start] repeat(10, [col-start] 1fr [col-end]) [full-end];
 }
