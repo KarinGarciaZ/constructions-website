@@ -1,11 +1,13 @@
 @import './base/base';
 
+@import './components/service-card';
+
 @import './layout/header';
 @import './layout/content-layout';
 @import './layout/sidebar';
 @import './layout/footer';
 
-@import './components/home';
-@import './components/constructions';
-@import './components/construction';
-@import './components/about-us';
+@import './pages/home';
+@import './pages/constructions';
+@import './pages/construction';
+@import './pages/about-us';

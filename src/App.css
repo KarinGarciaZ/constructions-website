@@ -19,6 +19,26 @@ body {
   grid-template-rows: repeat(2, min-content);
   grid-template-columns: [full-start] repeat(10, [col-start] 1fr [col-end]) [full-end]; }
 
+.service-card {
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  justify-items: center;
+  grid-row-gap: 2rem;
+  transition: all .2s;
+  padding: 2rem;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(100, 100, 100, 0.157); }
+  .service-card__icon {
+    font-size: 5rem; }
+  .service-card__title {
+    font-size: 2rem; }
+  .service-card__description {
+    font-size: 1.4rem;
+    text-align: center; }
+  .service-card:hover {
+    box-shadow: 0 0 2rem 0.5rem rgba(100, 100, 100, 0.164);
+    transform: scale(1.03) translateY(-2px);
+    cursor: pointer; }
+
 .header {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
@@ -68,7 +88,7 @@ body {
   background-color: #FEFEFE;
   display: grid;
   grid-template-rows: repeat(6, min-content);
-  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end]; }
+  grid-template-columns: [full-start] minmax(0, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(0, 1fr) [full-end]; }
 
 .image-container {
   grid-column: 1 / -1;
@@ -79,7 +99,11 @@ body {
   background-position: 50%; }
 
 .services {
-  grid-column: 1 / -1; }
+  grid-column: center-start / center-end;
+  margin: 10rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  grid-gap: 8rem; }
 
 .about-company {
   grid-column: 1 / -1; }
@@ -88,7 +112,9 @@ body {
   grid-column: 1 / -1; }
 
 .contact-us {
-  grid-column: 1 / -1; }
+  grid-column: 1 / -1;
+  padding: 13rem 0;
+  background-color: #9bb8da; }
 
 .constructions {
   grid-column: 1 / -1;
