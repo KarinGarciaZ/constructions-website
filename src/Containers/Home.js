@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Header from '../Components/Layout/Header';
 import ServiceCard from '../Components/Cards/ServiceCard';
 import EmailSection from '../Components/Sections/Form';
+import CarruselConstructions from '../Components/Sections/CarruselConstructions';
 
 class Home extends Component { 
 
@@ -22,9 +23,7 @@ class Home extends Component {
         <div className='about-company'>
 
         </div>
-        <div className='carrucel'>
-          
-        </div>
+        <CarruselConstructions />
         <EmailSection />
       </div>
     )
