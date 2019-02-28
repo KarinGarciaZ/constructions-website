@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from '../Components/Layout/Header';
+import ServiceCard from '../Components/Cards/ServiceCard';
 
 class Home extends Component {
   render() {
@@ -11,7 +12,10 @@ class Home extends Component {
 
         </div>
         <div className='services'>
-          
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
         </div>
         <div className='about-company'>
 
@@ -20,7 +24,7 @@ class Home extends Component {
 
         </div>
         <div className='contact-us'>
-
+          <div></div>
         </div>
       </div>
     )
