@@ -39,44 +39,21 @@ body {
     transform: scale(1.03) translateY(-2px);
     cursor: pointer; }
 
-.form-title {
-  grid-column: 1 / -1;
-  color: #192e46;
-  text-transform: capitalize;
-  font-size: 3rem;
-  transform: translateX(-3rem);
-  justify-self: center; }
-
-.form-group {
-  grid-column: 1 / -1; }
-
-.input {
-  padding: 1rem 1.5rem;
-  border-radius: 3px;
-  width: 90%;
-  display: block;
+.btn {
+  padding: 1.2rem 2.4rem;
+  background-color: #101d2c;
+  color: white;
   border: none;
-  color: #B0B0B0;
-  background-color: #FEFEFEEE;
-  border-bottom: 2px solid transparent; }
-  .input:focus {
-    outline: none;
-    border-bottom: 2px solid green;
-    box-shadow: 0 .5rem 4rem #77777777; }
-  .input:focus:invalid {
-    border-bottom: 2px solid orangered; }
-
-.input:placeholder-shown + .label {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-3rem); }
-
-.label {
-  font-size: 1.2rem;
-  display: block;
-  margin: .7rem 1rem;
-  opacity: 1;
-  transition: all .3s; }
+  border-radius: 2px;
+  text-transform: capitalize;
+  transition: all .2s;
+  cursor: pointer; }
+  .btn:hover {
+    box-shadow: 0 .5rem 2rem #77777777;
+    transform: translateY(-2px); }
+  .btn:active, .btn:focus {
+    transform: translateY(-1px);
+    outline: none; }
 
 .header {
   grid-column: 1 / -1;
@@ -119,12 +96,12 @@ body {
 .footer {
   grid-column: 1 / -1;
   min-height: 6vh;
-  background-color: #2b4058; }
+  background-color: #101d2c; }
 
 .home {
   grid-column: 1 / -1;
   min-height: 94vh;
-  background-color: #FEFEFEEE;
+  background-color: #FEFEFEDD;
   display: grid;
   grid-template-rows: repeat(6, min-content);
   grid-template-columns: [full-start] minmax(0, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(0, 1fr) [full-end]; }
@@ -139,7 +116,7 @@ body {
 
 .services {
   grid-column: center-start / center-end;
-  margin: 10rem 0;
+  margin: 13rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
   grid-gap: 8rem; }
@@ -150,6 +127,14 @@ body {
 .carrucel {
   grid-column: 1 / -1; }
 
+.constructions {
+  grid-column: 1 / -1;
+  min-height: 94vh;
+  background-color: #FEFEFEDD;
+  display: grid;
+  grid-template-rows: repeat(6, min-content);
+  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end]; }
+
 .contact-us {
   grid-column: 1 / -1;
   padding: 13rem 0;
@@ -159,7 +144,7 @@ body {
   .contact-us__img {
     grid-column: center-start / center-end;
     height: 50rem;
-    background-image: linear-gradient(80deg, transparent 0%, transparent 45%, rgba(255, 255, 255, 0.85) 45%), url(./Assets/Images/home.jpeg);
+    background-image: linear-gradient(80deg, transparent 0%, transparent 45%, rgba(255, 255, 255, 0.8) 45%), url(./Assets/Images/home.jpeg);
     background-size: cover;
     background-position: 50%;
     border-radius: 3px;
@@ -168,16 +153,51 @@ body {
       width: 50%;
       margin-left: auto;
       height: 100%;
-      padding: 4rem;
+      padding: 4.5rem 4rem;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(4, min-content);
-      grid-row-gap: 4rem; }
+      grid-row-gap: 3rem; }
 
-.constructions {
+.form-title {
   grid-column: 1 / -1;
-  min-height: 94vh;
-  background-color: #FEFEFEEE;
-  display: grid;
-  grid-template-rows: repeat(6, min-content);
-  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end]; }
+  color: #192e46;
+  font-size: 3rem;
+  transform: translateX(-3rem);
+  justify-self: center; }
+
+.form-group {
+  grid-column: 1 / -1; }
+
+.input {
+  padding: 1rem 1.5rem;
+  border-radius: 3px;
+  width: 90%;
+  display: block;
+  border: none;
+  color: #808080;
+  background-color: #FEFEFEDD;
+  border-bottom: 2px solid transparent;
+  resize: none; }
+  .input:focus {
+    outline: none;
+    border-bottom: 2px solid #55c57a;
+    box-shadow: 0 .5rem 4rem #77777777; }
+  .input:focus:invalid {
+    border-bottom: 2px solid orangered; }
+
+.input:placeholder-shown + .label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3rem); }
+
+.label {
+  font-size: 1.2rem;
+  display: block;
+  margin: .7rem 1rem 0 1rem;
+  opacity: 1;
+  transition: all .3s; }
+
+.btn-form {
+  grid-column: 1 / -1;
+  justify-self: center; }
