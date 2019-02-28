@@ -2,6 +2,7 @@
 
 @import './components/service-card';
 @import './components/form-elements';
+@import './components/button';
 
 @import './layout/header';
 @import './layout/content-layout';
@@ -12,3 +13,5 @@
 @import './pages/constructions';
 @import './pages/construction';
 @import './pages/about-us';
+
+@import './sections/form';
