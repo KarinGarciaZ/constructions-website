@@ -45,5 +45,37 @@
   padding: 13rem 0;
   background-color: $color-secondary-background;
 
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(0, 1fr) 
+    [center-start] repeat(10, [col-start] minmax(min-content, 10rem) [col-end]) 
+    [center-end] minmax(0, 1fr) [full-end];
 
+  &__img {
+    grid-column: center-start / center-end;
+    height: 50rem; 
+        
+    background-image: linear-gradient(80deg, 
+      transparent 0%,
+      transparent 45%,
+      rgba(255,255,255, .85) 45%),
+        url(./Assets/Images/home.jpeg);   
+                  
+    background-size: cover;    
+    background-position: 50%;
+    border-radius: 3px;
+    box-shadow: 0 1rem 4rem #00000050;
+
+    &--form {
+      width: 50%;
+      margin-left: auto;
+      height: 100%;
+      padding: 4rem;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, min-content);
+      grid-row-gap: 4rem;     
+    }
+  }
 }
