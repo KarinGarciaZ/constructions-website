@@ -1,0 +1,41 @@
+.home {
+  grid-column: 1 / -1;
+  min-height: 94vh;
+  background-color: $color-primary-light-5;
+
+  display: grid;
+  grid-template-rows: repeat(6, min-content);
+  grid-template-columns:
+    [full-start] minmax(0, 1fr) 
+    [center-start] repeat(10, [col-start] minmax(min-content, 12rem) [col-end]) 
+    [center-end] minmax(0, 1fr) [full-end];
+}
+
+.image-container {
+  grid-column: 1 / -1;
+  grid-row: 1 / 3;
+  min-height: 85vh;
+
+  background-image: linear-gradient(rgba(16,29,44,.70),rgba(16,29,44,.25)),
+                    url(./Assets/Images/home.jpeg);
+
+  background-size: cover;
+  background-position: 50%;
+}
+
+.services {
+  grid-column: center-start / center-end;
+  margin: 13rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(23rem,1fr));
+  grid-gap: 8rem;
+}
+
+.about-company {
+  grid-column: 1 / -1;
+}
+
+.carrucel {
+  grid-column: 1 / -1;
+}

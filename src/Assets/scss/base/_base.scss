@@ -5,7 +5,7 @@ $color-primary-light: #606060;
 $color-primary-light-2: #808080;
 $color-primary-light-3: #B0B0B0;
 $color-primary-light-4: #E0E0E0;
-$color-primary-light-5: #FEFEFE;
+$color-primary-light-5: #FEFEFEDD;
 
 $color-secondary: #101d2c;
 $color-secondary-hover: #192e46;
@@ -13,10 +13,9 @@ $color-secondary-smenu: #2b4058;
 $color-secondary-smenu-active: #374e68;
 $color-secondary-light-2: #03356d;
 $color-secondary-light: #486f9c;
+$color-secondary-background: #9bb8da;
 
-$color-green: #599e7e;
-$color-green-hover: #468166;
-$color-green-light-transparent: #99e2c052;
+$color-mediumgreen: #55c57a;
 
 // RESPONSIVE BREAKPOINTS
 $bp-1500: 93.75em;
@@ -50,9 +49,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: repeat(3, min-content);
-  grid-template-columns: [sidebar-start] max-content 
-    [sidebar-end full-start] minmax(2rem, 1fr) 
-    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) 
-    [center-end] minmax(2rem, 1fr) [full-end];
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns:
+    [full-start] repeat(10, [col-start] 1fr [col-end]) [full-end];
 }

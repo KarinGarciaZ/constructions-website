@@ -1,0 +1,29 @@
+.service-card {
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  justify-items: center;
+  grid-row-gap: 2rem;
+
+  transition: all .2s;
+  padding: 2rem;
+  box-shadow: 0 0 .5rem .2rem rgba(100, 100, 100, 0.157);
+
+  &__icon {
+    font-size: 5rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  &:hover {
+    box-shadow: 0 0 2rem .5rem rgba(100, 100, 100, 0.164);
+    transform: scale(1.03) translateY(-2px);
+    cursor: pointer;
+  }
+}

@@ -1,10 +1,31 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-class Home extends Component {
+import Header from '../Components/Layout/Header';
+import ServiceCard from '../Components/Cards/ServiceCard';
+import EmailSection from '../Components/Sections/Form';
+
+class Home extends Component { 
+
   render() {
     return (
       <div className='home'>
-        Hola
+        <Header classes='transparent' />
+        <div className='image-container'>
+
+        </div>
+        <div className='services'>
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+        </div>
+        <div className='about-company'>
+
+        </div>
+        <div className='carrucel'>
+          
+        </div>
+        <EmailSection />
       </div>
     )
   }
