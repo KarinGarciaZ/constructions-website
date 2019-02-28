@@ -66,7 +66,8 @@ body {
   grid-template-columns: 1fr repeat(3, max-content);
   grid-column-gap: 5rem;
   padding: 2.2rem 10rem;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  transition: all .2s; }
 
 .transparent {
   background-color: #FFFFFF11;
