@@ -19,6 +19,67 @@ body {
   grid-template-rows: repeat(2, min-content);
   grid-template-columns: [full-start] repeat(10, [col-start] 1fr [col-end]) [full-end]; }
 
+.btn {
+  padding: 1.2rem 2.4rem;
+  background-color: #101d2c;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  text-transform: capitalize;
+  transition: all .2s;
+  cursor: pointer; }
+  .btn:hover {
+    box-shadow: 0 .5rem 2rem #77777777;
+    transform: translateY(-2px); }
+  .btn:active, .btn:focus {
+    transform: translateY(-1px);
+    outline: none; }
+
+.construction-card {
+  width: 100%;
+  background-color: #b9d6fa33;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem; }
+  .construction-card__image {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 24rem;
+    object-fit: cover; }
+  .construction-card__title {
+    grid-column: 1 / -1;
+    font-size: 1.8rem;
+    background-color: #192e46;
+    color: white;
+    padding: 1rem 2rem;
+    width: 80%;
+    text-align: center;
+    justify-self: center;
+    text-transform: capitalize;
+    margin-top: -5rem;
+    margin-bottom: 1rem;
+    font-weight: 400; }
+  .construction-card__info {
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: capitalize;
+    margin-left: 2.5rem; }
+    .construction-card__info p {
+      font-size: 1.4rem;
+      margin-left: 1rem; }
+  .construction-card__icon {
+    font-size: 2.2rem;
+    color: #486f9c; }
+  .construction-card__btn {
+    grid-column: 1 / -1;
+    padding: 1.8rem;
+    background-color: #101d2c;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300; }
+
 .service-card {
   display: grid;
   grid-template-rows: repeat(3, min-content);
@@ -39,22 +100,6 @@ body {
     transform: scale(1.03) translateY(-2px);
     cursor: pointer; }
 
-.btn {
-  padding: 1.2rem 2.4rem;
-  background-color: #101d2c;
-  color: white;
-  border: none;
-  border-radius: 2px;
-  text-transform: capitalize;
-  transition: all .2s;
-  cursor: pointer; }
-  .btn:hover {
-    box-shadow: 0 .5rem 2rem #77777777;
-    transform: translateY(-2px); }
-  .btn:active, .btn:focus {
-    transform: translateY(-1px);
-    outline: none; }
-
 .header {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
@@ -67,6 +112,7 @@ body {
   grid-column-gap: 5rem;
   padding: 2.2rem 10rem;
   text-transform: capitalize;
+  z-index: 5;
   transition: all .2s; }
 
 .transparent {
@@ -96,7 +142,7 @@ body {
 
 .footer {
   grid-column: 1 / -1;
-  min-height: 6vh;
+  min-height: 10vh;
   background-color: #101d2c; }
 
 .home {
@@ -117,15 +163,12 @@ body {
 
 .services {
   grid-column: center-start / center-end;
-  margin: 13rem 0;
+  padding: 13rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
   grid-gap: 8rem; }
 
 .about-company {
-  grid-column: 1 / -1; }
-
-.carrusel {
   grid-column: 1 / -1; }
 
 .constructions {
@@ -139,7 +182,7 @@ body {
 .contact-us {
   grid-column: 1 / -1;
   padding: 13rem 0;
-  background-color: #9bb8da;
+  background-color: #d7dfe9;
   display: grid;
   grid-template-columns: [full-start] minmax(0, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(0, 1fr) [full-end]; }
   .contact-us__img {
@@ -202,3 +245,15 @@ body {
 .btn-form {
   grid-column: 1 / -1;
   justify-self: center; }
+
+.carousel {
+  grid-column: 1 / -1;
+  padding: 11rem 0;
+  background-color: #FEFEFE;
+  display: grid;
+  grid-template-columns: minmax(4rem, 1fr) [start-center] repeat(8, minmax(min-content, 15rem)) [end-center] minmax(4rem, 1fr); }
+  .carousel-constructions-container {
+    grid-column: start-center / end-center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 10rem; }
