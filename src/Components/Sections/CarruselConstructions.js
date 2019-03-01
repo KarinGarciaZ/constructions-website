@@ -31,6 +31,7 @@ class CarruselConstructions extends Component {
 
     return (
       <div className='carousel'>
+        <h2 className='carousel__title u-title-2 u-margin-bottom-8'>Some of our works!</h2>
         <div className='carousel-constructions-container'>
           {carouselItems}
         </div>

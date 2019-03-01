@@ -6,7 +6,7 @@
 
   transition: all .2s;
   padding: 2rem;
-  box-shadow: 0 0 .5rem .2rem rgba(100, 100, 100, 0.157);
+  box-shadow: 0 .2rem .5rem .2rem rgba(150, 150, 150, 0.157);
 
   &__icon {
     font-size: 5rem;
@@ -17,13 +17,13 @@
   }
 
   &__description {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 
   &:hover {
-    box-shadow: 0 0 2rem .5rem rgba(100, 100, 100, 0.164);
-    transform: scale(1.03) translateY(-2px);
+    box-shadow: 0 .5rem 2rem 0 rgba(150, 150, 150, 0.164);
+    transform: scale(1.04) translateY(-5px);
     cursor: pointer;
   }
 }

@@ -16,8 +16,8 @@
   grid-row: 1 / 3;
   min-height: 85vh;
 
-  background-image: linear-gradient(rgba(16,29,44,.70),rgba(16,29,44,.25)),
-                    url(./Assets/Images/home.jpeg);
+  background-image: linear-gradient(rgba(16,29,44,.60),rgba(16, 29, 44, 0.048)),
+                    url(./Assets/Images/home1.jpg);
 
   background-size: cover;
   background-position: 50%;
@@ -25,13 +25,15 @@
 
 .services {
   grid-column: center-start / center-end;
-  padding: 13rem 0;
+  padding: 7rem 0 10rem 0;
 
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(23rem,1fr));
   grid-gap: 8rem;
-}
 
-.about-company {
-  grid-column: 1 / -1;
+  &__title {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-bottom: 3rem;
+  }
 }
