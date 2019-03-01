@@ -1,0 +1,19 @@
+.carousel {
+  grid-column: 1 / -1;
+
+  padding: 11rem 0;
+  background-color: #FEFEFE;
+
+  display: grid;
+  grid-template-columns: minmax(4rem, 1fr) 
+    [start-center] repeat(8, minmax(min-content, 15rem)) 
+    [end-center] minmax(4rem, 1fr);
+
+  &-constructions-container {
+    grid-column: start-center / end-center;
+
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax( 30rem, 1fr ));
+    grid-gap: 10rem;
+  }
+}
