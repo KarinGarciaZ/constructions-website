@@ -12,7 +12,7 @@ class Home extends Component {
   }
 
   listenScrollEvent = e => {
-    if (window.scrollY > 500) {
+    if (window.scrollY > 450) {
       this.setState({colorHeader: ''})
     } else {
       this.setState({colorHeader: 'transparent'})
@@ -21,6 +21,12 @@ class Home extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.listenScrollEvent)
+  }
+
+  shouldComponentUpdate( nextProps, nextState ) {
+    if( this.state.colorHeader !== nextState.colorHeader )
+      return true;
+    return false;
   }
 
   render() {
@@ -39,7 +45,7 @@ class Home extends Component {
         <div className='about-company'>
 
         </div>
-        <CarruselConstructions />
+        <CarruselConstructions { ...this.props } />
         <EmailSection />
       </div>
     )
