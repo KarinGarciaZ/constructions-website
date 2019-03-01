@@ -170,8 +170,29 @@ body {
 
 .footer {
   grid-column: 1 / -1;
-  min-height: 10vh;
-  background-color: #101d2c; }
+  background-color: #101d2c;
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: [footer-start] 1fr [center-start] repeat(5, [col-start] minmax(min-content, 20rem) [col-end]) [center-end] 1fr [footer-end];
+  grid-gap: 2rem; }
+  .footer__container {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+    .footer__container--contact {
+      display: grid;
+      grid-gap: 2rem; }
+      .footer__container--contact-item {
+        display: flex;
+        align-items: center; }
+        .footer__container--contact-item .contact-icon {
+          font-size: 3.5rem;
+          color: #486f9c; }
+        .footer__container--contact-item a, .footer__container--contact-item p {
+          margin-left: 1rem;
+          color: white;
+          font-size: 1.6rem;
+          text-decoration: none; }
 
 .home {
   grid-column: 1 / -1;
