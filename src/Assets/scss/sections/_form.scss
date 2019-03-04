@@ -28,12 +28,12 @@
       width: 50%;
       margin-left: auto;
       height: 100%;
-      padding: 4.5rem 4rem;
+      padding: 1rem 4rem 2rem 4rem;
 
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(4, min-content);
-      grid-row-gap: 3rem;     
+      grid-row-gap: 1rem;     
     }
   }
 }
