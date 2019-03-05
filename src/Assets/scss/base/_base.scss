@@ -12,8 +12,10 @@ $color-secondary-card: #b9d6fa33;
 $color-mediumgreen: #55c57a;
 
 // RESPONSIVE BREAKPOINTS
-$bp-1500: 93.75em;
+$bp-1400: 87.5em;
+$bp-1300: 81.25em;
 $bp-1200: 75em;
+$bp-1100: 68.75em;
 $bp-1000: 62.5em;
 $bp-900: 56.25em;
 $bp-800: 50em;
@@ -46,4 +48,10 @@ body {
   grid-template-rows: repeat(2, min-content);
   grid-template-columns:
     [full-start] repeat(10, [col-start] 1fr [col-end]) [full-end];
+}
+
+@media only screen and (max-width: $bp-800) {
+  html {
+    font-size: 50%;
+  }
 }

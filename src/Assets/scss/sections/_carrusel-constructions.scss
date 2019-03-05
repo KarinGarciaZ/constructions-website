@@ -1,14 +1,14 @@
 .carousel {
   grid-column: 1 / -1;
 
-  padding: 7rem 0 10rem 0;
+  padding: 6rem 0 10rem 0;
   background-color: #FEFEFE;
 
   display: grid;
-  grid-template-columns: minmax(4rem, 1fr) 
+  grid-template-columns: minmax(2rem, 1fr) 
     [start-center] repeat(8, minmax(min-content, 15rem)) 
-    [end-center] minmax(4rem, 1fr);
-
+    [end-center] minmax(2rem, 1fr);
+  
   &__title {
     grid-column: 1 / -1;
     justify-self: center;    
@@ -18,7 +18,76 @@
     grid-column: start-center / end-center;
 
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax( 30rem, 1fr ));
+    grid-template-columns: repeat( auto-fit, 33rem);    
+    justify-content: center;
     grid-gap: 10rem;
+  }
+}
+
+@media only screen and (max-width: $bp-1300) {
+  .carousel {
+
+    padding-top: 4rem;
+
+    .u-title-2 {
+      margin-bottom: 5rem;
+    }
+  
+    &-constructions-container {
+      grid-column-gap: 5.5rem;
+      grid-row-gap: 7rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-1200) {
+  .carousel {  
+    &-constructions-container {
+      grid-gap: 10rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-900) {
+  .carousel {  
+    &-constructions-container {
+      grid-column-gap: 4.3rem;
+      grid-row-gap: 7rem;   
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-700) {
+  .carousel {  
+    &-constructions-container {
+      grid-template-columns: repeat( auto-fit, 32.3rem);    
+    }
+  }
+}
+
+
+@media only screen and (max-width: $bp-600) {
+  .carousel {  
+
+    .u-title-2 {
+      margin-bottom: 8rem;
+    }
+
+    &-constructions-container {      
+      grid-gap: 15rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-400) {
+  .carousel {  
+
+    .u-title-2 {
+      margin-bottom: 8rem;
+    }
+
+    &-constructions-container {      
+      grid-gap: 10rem;
+    }
   }
 }
