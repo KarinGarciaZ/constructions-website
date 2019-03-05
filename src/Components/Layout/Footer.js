@@ -14,6 +14,13 @@ class Footer extends Component {
       <div className='footer'>
         <div className='footer__container'>
 
+          <div className='footer__container--contact footer-navigate'>
+            <p className='footer__container--contact-title'>Navigate</p>
+            <Link to='/all-constructions' className='footer__container--contact-link'>our constructions</Link>
+            <Link to='/' className='footer__container--contact-link'>our services</Link>
+            <Link to='/about-us' className='footer__container--contact-link'>About us</Link>
+          </div>
+
           <div className='footer__container--contact'>
             <p className='footer__container--contact-title'>Contact companyname</p>          
             <div className='footer__container--contact-item'>            
@@ -28,13 +35,6 @@ class Footer extends Component {
               <FontAwesomeIcon icon={faEnvelope} className='contact-icon'/>
               <p>email@companyname.com</p>
             </div>
-          </div>
-
-          <div className='footer__container--contact'>
-            <p className='footer__container--contact-title'>Navigate</p>
-            <Link to='/all-constructions' className='footer__container--contact-link'>our constructions</Link>
-            <Link to='/' className='footer__container--contact-link'>our services</Link>
-            <Link to='/about-us' className='footer__container--contact-link'>About us</Link>
           </div>   
 
           <div className='footer__container--contact'>

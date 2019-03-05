@@ -10,7 +10,7 @@
   grid-template-columns: 1fr repeat(3, max-content);
   grid-column-gap: 5rem;
 
-  padding: 1.8rem 10rem;
+  padding: 1.8rem 8rem 1.8rem 5rem;
   text-transform: capitalize;  
   z-index: 5;
 
@@ -19,7 +19,7 @@
 
 .transparent { 
   background-color: #FFFFFF11;
-  padding: 3rem 10rem;
+  padding: 3rem 8rem 3rem 5rem;
 }
 
 .company {
@@ -35,7 +35,6 @@
   &__name {    
     color: white;
     font-size: 2rem;
-    margin-left: 3rem;
   }
 }
 
@@ -43,4 +42,23 @@
   text-decoration: none;
   color: white;
   font-size: 2rem;
+}
+
+@media only screen and (max-width: $bp-900) {
+  .header {
+    grid-column-gap: 2.5rem;
+    padding: 1.8rem 4rem;    
+  }
+
+  .transparent {
+    padding: 2.5rem 3rem;
+  }
+}
+
+@media only screen and (max-width: $bp-600) {
+  .company {  
+    &__name {    
+      display: none;
+    }
+  }
 }

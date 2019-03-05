@@ -1,13 +1,13 @@
 .contact-us {
   grid-column: 1 / -1;
-  padding: 13rem 0;
+  padding: 11rem 0;
   background-color: $color-secondary-background;
 
   display: grid;
   grid-template-columns:
-    [full-start] minmax(0, 1fr) 
+    [full-start] minmax(3rem, 1fr) 
     [center-start] repeat(10, [col-start] minmax(min-content, 10rem) [col-end]) 
-    [center-end] minmax(0, 1fr) [full-end];
+    [center-end] minmax(3rem, 1fr) [full-end];
 
   &__img {
     grid-column: center-start / center-end;
@@ -90,4 +90,55 @@
 .btn-form {
   grid-column: 1 / -1;
   justify-self: center;
+}
+
+@media only screen and (max-width: $bp-1100) {
+  .contact-us {
+    padding: 8rem 0;
+  }
+}
+
+@media only screen and (max-width: $bp-800) {
+  .contact-us {
+    &__img {
+      height: 55rem;
+
+      background-image: linear-gradient(80deg, 
+        transparent 0%,
+        transparent 35%,
+        rgba(255,255,255, .80) 35%),
+          url(./Assets/Images/home.jpeg);                       
+  
+      &--form {
+        width: 65%;        
+        padding: 1rem 2rem 2rem 4rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-600) {
+  .contact-us {
+    &__img {
+      height: 55rem; 
+          
+      background-image: linear-gradient(
+        rgba(255,255,255, .70) 0%,
+        rgba(255,255,255, .70) 100%),
+          url(./Assets/Images/home.jpeg);                       
+  
+      &--form {
+        width: 100%;       
+      }
+    }
+  }
+
+  .input {
+    width: 95%;
+  }
+
+  .form-title {
+    font-size: 2.8rem;
+    transform: translateX(0);
+  }
 }
