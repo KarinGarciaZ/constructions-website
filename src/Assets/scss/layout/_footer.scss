@@ -129,6 +129,7 @@
 @media only screen and (max-width: $bp-400) {
   .footer {  
     padding: 3rem 1rem;
+    text-align: center;
 
     &__container {
       grid-template-columns: 1fr;
@@ -144,6 +145,10 @@
 
       &--contact-link {
         font-size: 1.2rem;
+      }
+
+      &--contact {
+        justify-items: center;
       }
     }
   }
