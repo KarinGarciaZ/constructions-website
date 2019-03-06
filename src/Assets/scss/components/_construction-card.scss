@@ -57,26 +57,40 @@
   }
 }
 
-@media only screen and (max-width: $bp-1000) {
+@media only screen and (max-width: $bp-1200) {
   .construction-card {  
-    transform: scale(0.9);
+    grid-gap: 2rem;  
+
+    &__image {
+      height: 20rem;
+    }
+  
+    &__title {
+      font-size: 1.6rem;
+      padding: 1rem 1rem;      
+      margin-top: -4rem;
+    }
+  
+    &__info {
+      margin-left: 1.5rem;
+      
+      p {
+        font-size: 1.3rem;
+      }    
+    }
+  
+    &__icon {
+      font-size: 2rem;
+    }
+  
+    &__btn {
+      padding: 1.6rem;
+    }
   }
 }
 
-@media only screen and (max-width: $bp-800) {
-  .construction-card {  
-    transform: scale(1);
-  }
-}
-
-@media only screen and (max-width: $bp-600) {
+@media only screen and (max-width: $bp-500) {
   .construction-card {  
     transform: scale(1.2);
-  }
-}
-
-@media only screen and (max-width: $bp-400) {
-  .construction-card {  
-    transform: scale(1.1);
   }
 }
