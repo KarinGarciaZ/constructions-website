@@ -111,21 +111,27 @@ body {
     text-transform: uppercase;
     font-weight: 300; }
 
-@media only screen and (max-width: 62.5em) {
+@media only screen and (max-width: 75em) {
   .construction-card {
-    transform: scale(0.9); } }
+    grid-gap: 2rem; }
+    .construction-card__image {
+      height: 20rem; }
+    .construction-card__title {
+      font-size: 1.6rem;
+      padding: 1rem 1rem;
+      margin-top: -4rem; }
+    .construction-card__info {
+      margin-left: 1.5rem; }
+      .construction-card__info p {
+        font-size: 1.3rem; }
+    .construction-card__icon {
+      font-size: 2rem; }
+    .construction-card__btn {
+      padding: 1.6rem; } }
 
-@media only screen and (max-width: 50em) {
-  .construction-card {
-    transform: scale(1); } }
-
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 31.25em) {
   .construction-card {
     transform: scale(1.2); } }
-
-@media only screen and (max-width: 25em) {
-  .construction-card {
-    transform: scale(1.1); } }
 
 .service-card {
   display: grid;
@@ -146,6 +152,33 @@ body {
     box-shadow: 0 0.5rem 2rem 0 rgba(150, 150, 150, 0.164);
     transform: scale(1.04) translateY(-5px);
     cursor: pointer; }
+  @media only screen and (max-width: 62.5em) {
+    .service-card {
+      padding: .8rem; }
+      .service-card__icon {
+        font-size: 4rem; }
+      .service-card__title {
+        font-size: 1.7rem; }
+      .service-card__description {
+        font-size: 1.3rem; } }
+  @media only screen and (max-width: 43.75em) {
+    .service-card {
+      padding: 2rem; }
+      .service-card__icon {
+        font-size: 5rem; }
+      .service-card__title {
+        font-size: 2rem; }
+      .service-card__description {
+        font-size: 1.5rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .service-card {
+      padding: .8rem; }
+      .service-card__icon {
+        font-size: 4rem; }
+      .service-card__title {
+        font-size: 1.7rem; }
+      .service-card__description {
+        font-size: 1.4rem; } }
 
 .header {
   grid-column: 1 / -1;
@@ -190,7 +223,7 @@ body {
     padding: 2.5rem 3rem; } }
 
 @media only screen and (max-width: 37.5em) {
-  .company__name {
+  .nav {
     display: none; } }
 
 .content-layout {
@@ -279,7 +312,8 @@ body {
 
 @media only screen and (max-width: 25em) {
   .footer {
-    padding: 3rem 1rem; }
+    padding: 3rem 1rem;
+    text-align: center; }
     .footer__container {
       grid-template-columns: 1fr;
       grid-row-gap: 4rem; }
@@ -288,7 +322,9 @@ body {
       .footer__container--contact-title {
         display: none; }
       .footer__container--contact-link {
-        font-size: 1.2rem; } }
+        font-size: 1.2rem; }
+      .footer__container--contact {
+        justify-items: center; } }
 
 .home {
   grid-column: 1 / -1;
@@ -310,12 +346,44 @@ body {
   grid-column: center-start / center-end;
   padding: 7rem 0 10rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  grid-template-columns: repeat(4, 23rem);
+  justify-content: center;
   grid-gap: 7rem; }
   .services__title {
     grid-column: 1 / -1;
     justify-self: center;
     margin-bottom: 3rem; }
+  @media only screen and (max-width: 75em) {
+    .services {
+      grid-gap: 3rem;
+      grid-template-columns: repeat(4, 21rem); } }
+  @media only screen and (max-width: 62.5em) {
+    .services {
+      grid-gap: 2.4rem;
+      grid-template-columns: repeat(4, 16.8rem);
+      padding: 7rem 0; }
+      .services__title {
+        font-size: 3rem; } }
+  @media only screen and (max-width: 50em) {
+    .services {
+      grid-gap: 3rem;
+      grid-template-columns: repeat(4, 18rem); } }
+  @media only screen and (max-width: 43.75em) {
+    .services {
+      grid-gap: 7rem;
+      grid-template-columns: repeat(2, 21rem);
+      padding: 5rem 0 7rem 0; }
+      .services__title {
+        margin-bottom: 0; } }
+  @media only screen and (max-width: 31.25em) {
+    .services {
+      grid-gap: 3rem;
+      grid-template-columns: repeat(2, 18rem);
+      padding: 5rem 0; } }
+  @media only screen and (max-width: 25em) {
+    .services {
+      grid-gap: 2rem;
+      grid-template-columns: repeat(2, 17rem); } }
 
 .constructions {
   grid-column: 1 / -1;
@@ -435,36 +503,27 @@ body {
 @media only screen and (max-width: 81.25em) {
   .carousel {
     padding-top: 4rem; }
-    .carousel .u-title-2 {
-      margin-bottom: 5rem; }
     .carousel-constructions-container {
       grid-column-gap: 5.5rem;
       grid-row-gap: 7rem; } }
 
 @media only screen and (max-width: 75em) {
   .carousel-constructions-container {
-    grid-gap: 10rem; } }
-
-@media only screen and (max-width: 56.25em) {
-  .carousel-constructions-container {
-    grid-column-gap: 4.3rem;
-    grid-row-gap: 7rem; } }
-
-@media only screen and (max-width: 43.75em) {
-  .carousel-constructions-container {
-    grid-template-columns: repeat(auto-fit, 32.3rem); } }
+    grid-template-columns: repeat(auto-fit, 28rem);
+    grid-column-gap: 5rem; } }
 
 @media only screen and (max-width: 37.5em) {
-  .carousel .u-title-2 {
-    margin-bottom: 8rem; }
   .carousel-constructions-container {
-    grid-gap: 15rem; } }
+    grid-template-columns: repeat(auto-fit, 27rem);
+    grid-column-gap: 2.4rem;
+    grid-row-gap: 3rem; } }
 
-@media only screen and (max-width: 25em) {
-  .carousel .u-title-2 {
-    margin-bottom: 8rem; }
+@media only screen and (max-width: 37.5em) {
   .carousel-constructions-container {
-    grid-gap: 10rem; } }
+    grid-template-columns: repeat(auto-fit, 30rem);
+    grid-row-gap: 12rem; }
+  .carousel .u-title-2 {
+    margin-bottom: 8rem; } }
 
 .about-company {
   grid-column: 1 / -1;

@@ -26,12 +26,7 @@
 
 @media only screen and (max-width: $bp-1300) {
   .carousel {
-
-    padding-top: 4rem;
-
-    .u-title-2 {
-      margin-bottom: 5rem;
-    }
+    padding-top: 4rem;    
   
     &-constructions-container {
       grid-column-gap: 5.5rem;
@@ -43,51 +38,31 @@
 @media only screen and (max-width: $bp-1200) {
   .carousel {  
     &-constructions-container {
-      grid-gap: 10rem;
+      grid-template-columns: repeat( auto-fit, 28rem);
+      grid-column-gap: 5rem;
     }
   }
 }
-
-@media only screen and (max-width: $bp-900) {
-  .carousel {  
-    &-constructions-container {
-      grid-column-gap: 4.3rem;
-      grid-row-gap: 7rem;   
-    }
-  }
-}
-
-@media only screen and (max-width: $bp-700) {
-  .carousel {  
-    &-constructions-container {
-      grid-template-columns: repeat( auto-fit, 32.3rem);    
-    }
-  }
-}
-
 
 @media only screen and (max-width: $bp-600) {
   .carousel {  
-
-    .u-title-2 {
-      margin-bottom: 8rem;
-    }
-
-    &-constructions-container {      
-      grid-gap: 15rem;
+    &-constructions-container {
+      grid-template-columns: repeat( auto-fit, 27rem);
+      grid-column-gap: 2.4rem;
+      grid-row-gap: 3rem;
     }
   }
 }
 
-@media only screen and (max-width: $bp-400) {
+@media only screen and (max-width: $bp-600) {
   .carousel {  
+    &-constructions-container {
+      grid-template-columns: repeat( auto-fit, 30rem);
+      grid-row-gap: 12rem;
+    }
 
     .u-title-2 {
       margin-bottom: 8rem;
-    }
-
-    &-constructions-container {      
-      grid-gap: 10rem;
     }
   }
 }

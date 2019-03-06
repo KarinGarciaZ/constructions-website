@@ -26,4 +26,52 @@
     transform: scale(1.04) translateY(-5px);
     cursor: pointer;
   }
+
+  @media only screen and (max-width: $bp-1000) {
+    padding: .8rem;
+
+    &__icon {
+      font-size: 4rem;
+    }
+  
+    &__title {
+      font-size: 1.7rem;
+    }
+  
+    &__description {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-700) {
+    padding: 2rem;
+
+    &__icon {
+      font-size: 5rem;
+    }
+  
+    &__title {
+      font-size: 2rem;
+    }
+  
+    &__description {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-500) {
+    padding: .8rem;
+
+    &__icon {
+      font-size: 4rem;
+    }
+  
+    &__title {
+      font-size: 1.7rem;
+    }
+  
+    &__description {
+      font-size: 1.4rem;
+    }
+  }
 }
