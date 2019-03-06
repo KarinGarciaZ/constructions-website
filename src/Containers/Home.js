@@ -13,7 +13,7 @@ class Home extends Component {
 
     return (
       <div className='home'>
-        <Header />
+        <Header fromHome={true} />
 
         <div className='image-container'></div>
 

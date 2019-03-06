@@ -203,7 +203,7 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, max-content);
-  grid-column-gap: 2rem; }
+  grid-column-gap: 4rem; }
   .company__logo {
     max-height: 100%; }
   .company__name {
@@ -253,9 +253,10 @@ body {
         display: block;
         height: 2px;
         background-color: #d7dfe9; }
-  .active {
-    grid-gap: 1.5rem;
+  .transparent.active {
     background-color: #FFFFFF22; }
+  .active {
+    grid-gap: 1.5rem; }
     .active .mobile-menu-content {
       transition: all .3s;
       transform: rotate(45deg); }
@@ -390,7 +391,7 @@ body {
 
 .constructions {
   grid-column: 1 / -1;
-  min-height: 94vh;
+  min-height: 57vh;
   background-color: #FEFEFEDD;
   display: grid;
   grid-template-rows: repeat(6, min-content);

@@ -42,7 +42,7 @@ class Header extends Component {
 
   render() {
     let classes = ['header'];
-    if ( this.state.extraClasses.transparent )
+    if ( this.state.extraClasses.transparent && this.props.fromHome )
       classes.push('transparent')
     if ( this.state.extraClasses.active )
       classes.push('active')
