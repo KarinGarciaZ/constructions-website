@@ -28,11 +28,13 @@
   grid-template-columns: repeat(2, max-content);
   grid-column-gap: 4rem;
 
-  &__logo {
-    max-height: 100%;
+  &__logo {    
+    cursor: pointer;
+    max-height: 3rem;
   }
 
-  &__name {    
+  &__name {        
+    cursor: pointer;
     color: white;
     font-size: 2rem;
     font-weight: 500;
