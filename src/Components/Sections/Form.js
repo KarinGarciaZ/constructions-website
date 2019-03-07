@@ -23,8 +23,13 @@ class Form extends Component {
   }
 
   render() {
+
+    let classes = ['contact-us'];
+    if (this.props.classes)
+      classes.push(this.props.classes)
+
     return (
-      <section className='contact-us'>
+      <section className={classes.join(' ')}>
         <div className='contact-us__img'>
           <form className='contact-us__img--form' onSubmit={ e => this.sendMail(e)}>
             <h2 className='form-title'>

@@ -73,6 +73,10 @@
   }    
 }
 
+.background-blue {
+  background-color: $color-secondary-hover-2;
+}
+
 .input:placeholder-shown + .label{
   opacity: 0;
   visibility: hidden;
