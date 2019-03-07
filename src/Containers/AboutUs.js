@@ -1,10 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Header from '../Components/Layout/Header';
 
 class AboutUs extends Component {
-  render() {
+  render() {    
+    
+    let props = { ...this.props };
+
     return (
       <div className='about-us'>
-        aboutus
+        <Header { ...props } />
+        <div className='about-us__container'>
+
+        </div>
       </div>
     )
   }

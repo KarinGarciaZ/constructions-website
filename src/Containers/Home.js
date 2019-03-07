@@ -11,10 +11,12 @@ import CarouselServices from '../Components/Sections/CarouselServices';
 class Home extends Component { 
 
   render() {
+    
+    let props = { ...this.props };
 
     return (
       <div className='home'>
-        <Header fromHome={true} />
+        <Header fromHome={true} {...props}/>
 
         <div className='image-container'>
           <div className='midcontainer'>

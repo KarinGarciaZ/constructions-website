@@ -40,6 +40,10 @@ class Header extends Component {
     this.setState({extraClasses: classes})
   }
 
+  goToHome = () => {
+    this.props.history.push('/')
+  }
+
   render() {
     let classes = ['header'];
     if ( this.state.extraClasses.transparent && this.props.fromHome )
@@ -50,8 +54,8 @@ class Header extends Component {
     return (
       <div className={classes.join(' ')}>
         <div className='company'>
-          <img className='company__logo' src={logo} alt='img_logo'/>
-          <span className='company__name'>company name</span>
+          <img className='company__logo' src={logo} alt='img_logo' onClick={this.goToHome}/>
+          <span className='company__name' onClick={this.goToHome}>company name</span>
         </div>
         <div className='mobile-menu' onClick={this.onHandleMenu}>
           <div className='mobile-menu-content'></div>

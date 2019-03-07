@@ -4,9 +4,12 @@ import Header from '../Components/Layout/Header';
 
 class Constructions extends Component {
   render() {
+    
+    let props = { ...this.props };
+
     return (
       <div className='constructions'>
-        <Header />
+        <Header { ...props }/>
         constructions
       </div>
     )
