@@ -1,4 +1,137 @@
 .about-us {
   min-height: 70vh;
   grid-column: 1 / -1;
+
+  &__container {
+    display: grid;
+    grid-template-columns: [container-starts] minmax(3rem, 1fr)
+      [center-starts] repeat( 12, [col-starts] minmax(min-content, 10rem) [col-ends] ) [center-ends]
+      minmax(3rem, 1fr) [container-ends];
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 17rem;
+    background-image: linear-gradient(rgba(16,29,44,.3),rgba(16, 29, 44, 0.3)),
+                    url(./Assets/Images/home1.jpg);
+
+    background-size: cover;
+    background-position: 50%;
+
+    &--text {
+      font-size: 5rem;
+      font-weight: 400;
+      color: $color-secondary-background;
+    }
+  }
+
+  &__objectives {
+
+    padding: 8rem 0;
+    grid-column: center-starts / center-ends;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+
+    &--img {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;        
+      }
+    }
+
+    &--team {
+      grid-column: 3 / span 2;
+      background-color: $color-primary-light-5;
+    }
+  
+    &--mision {
+      grid-column: 3 / 4;    
+      background-color: $color-primary-light-5;
+    }
+  
+    &--vision {
+      grid-column: 4 / 5;
+      background-color: $color-primary-light-5;
+    }
+  }
+
+  &__team-members {
+    grid-column: 1 / -1;
+    padding: 8rem 0;
+    background-color: $color-secondary;
+    display: grid;
+    grid-template-columns: [container-starts] minmax(6rem, 1fr)
+      [center-starts] repeat( 12, [col-starts] minmax(min-content, 8rem) [col-ends] ) [center-ends]
+      minmax(6rem, 1fr) [container-ends];
+    grid-row-gap: 5rem;
+
+    &--card {
+      grid-column: center-starts / center-ends;
+      padding: 4rem;
+      background-color: $color-white-trans;
+      transform: skewX(12deg);
+      display: flex;
+
+      &-shape {
+        height: 15rem;
+        width: 15rem;
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        transform: skewX(-12deg);
+        position: relative;
+
+        img{
+          height: 100%;
+          transform: scale(1.3) translateX(-3rem);
+          transition: all .3s;
+        }
+
+        span {
+          position: absolute;
+          transition: all .3s;
+          top: 90%;
+          left: 50%;
+          font-size: 1.8rem;
+          color: white;
+          transform: translateX(-50%);
+          text-align: center;
+          opacity: 0;
+        }
+      }
+
+      &-text {
+        transform: skewX(-12deg);
+        margin-left: 3rem;
+
+        h2{ font-size: 2.5rem; }
+        p { font-size: 1.4rem; }
+      }
+      
+      &:hover{
+
+        img{          
+          transform: scale(1) translateX(-3rem);;
+          filter: blur(1px) brightness(80%);
+        }
+
+        span {
+          top: 50%;
+          transform: translateY(-50%) translateX(-50%);
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
