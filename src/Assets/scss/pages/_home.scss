@@ -16,9 +16,10 @@
   grid-row: 1 / 3;
   min-height: 92vh;
 
-  background-image: linear-gradient(rgba(16,29,44,.60),rgba(16, 29, 44, 0.048)),
+  background-image: linear-gradient(rgba(16,29,44,.60),rgba(16, 29, 44, 0.4)),
                     url(./Assets/Images/home1.jpg);
 
   background-size: cover;
   background-position: 50%;
+  position: relative;
 }

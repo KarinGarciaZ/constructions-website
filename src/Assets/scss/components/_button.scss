@@ -16,5 +16,100 @@
   &:active, &:focus {
     transform: translateY(-1px);
     outline: none;
+  }  
+}
+
+.midcontainer {
+  position: absolute;  
+  width: 100%;
+  top: 37%;
+  text-align: center;
+
+  .text--image {
+    color: rgba(255, 255, 255, 0.787);
+    font-size: 4.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    animation: moveInRight 1.5s ease;
+    margin-bottom: 10rem;
+  }
+
+  .btn--image { 
+    text-transform: capitalize;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: $color-primary-light-2;
+    font-weight: 400;
+    font-size: 2.1rem;    
+    padding: 1.5rem 3.5rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 30px;
+      z-index: -1;
+      transition: all .35s;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    &:hover {
+      transform: translateY(-.3rem);
+      box-shadow: 0 1rem 2rem #77777777;
+
+      &::after {
+        transform: scale(1.5);        
+        opacity: 0;
+      }
+    }
+
+    &:active {
+      transform: translateY(-.1rem);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-900) {
+  .midcontainer {
+    top: 35%;
+  
+    .text--image {
+      font-size: 4rem;
+      margin-bottom: 9rem;
+    }
+  
+    .btn--image { 
+      font-size: 2rem;    
+      padding: 1.6rem 3.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-800) {
+  .midcontainer {
+    top: 37%;
+  
+    .text--image {
+      font-size: 4.5rem;
+      margin-bottom: 11rem;
+    }
+  
+    .btn--image { 
+      font-size: 2.2rem;    
+      padding: 1.5rem 3.5rem;
+    }
   }
 }

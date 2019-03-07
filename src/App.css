@@ -50,6 +50,16 @@ body {
   font-size: 1.6rem;
   color: #808080; }
 
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translate(-80%) rotate(200deg); }
+  70% {
+    transform: translate(0); }
+  100% {
+    opacity: 1;
+    transform: translate(0) rotate(0); } }
+
 .btn {
   padding: 1.2rem 2.4rem;
   background-color: #101d2c;
@@ -65,6 +75,74 @@ body {
   .btn:active, .btn:focus {
     transform: translateY(-1px);
     outline: none; }
+
+.midcontainer {
+  position: absolute;
+  width: 100%;
+  top: 37%;
+  text-align: center; }
+  .midcontainer .text--image {
+    color: rgba(255, 255, 255, 0.787);
+    font-size: 4.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    animation: moveInRight 1.5s ease;
+    margin-bottom: 10rem; }
+  .midcontainer .btn--image {
+    text-transform: capitalize;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #808080;
+    font-weight: 400;
+    font-size: 2.1rem;
+    padding: 1.5rem 3.5rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer; }
+    .midcontainer .btn--image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 30px;
+      z-index: -1;
+      transition: all .35s;
+      background-color: rgba(255, 255, 255, 0.9); }
+    .midcontainer .btn--image:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem #77777777; }
+      .midcontainer .btn--image:hover::after {
+        transform: scale(1.5);
+        opacity: 0; }
+    .midcontainer .btn--image:active {
+      transform: translateY(-0.1rem); }
+    .midcontainer .btn--image:focus {
+      outline: none; }
+
+@media only screen and (max-width: 56.25em) {
+  .midcontainer {
+    top: 35%; }
+    .midcontainer .text--image {
+      font-size: 4rem;
+      margin-bottom: 9rem; }
+    .midcontainer .btn--image {
+      font-size: 2rem;
+      padding: 1.6rem 3.5rem; } }
+
+@media only screen and (max-width: 50em) {
+  .midcontainer {
+    top: 37%; }
+    .midcontainer .text--image {
+      font-size: 4.5rem;
+      margin-bottom: 11rem; }
+    .midcontainer .btn--image {
+      font-size: 2.2rem;
+      padding: 1.5rem 3.5rem; } }
 
 .construction-card {
   width: 100%;
@@ -385,9 +463,10 @@ body {
   grid-column: 1 / -1;
   grid-row: 1 / 3;
   min-height: 92vh;
-  background-image: linear-gradient(rgba(16, 29, 44, 0.6), rgba(16, 29, 44, 0.048)), url(./Assets/Images/home1.jpg);
+  background-image: linear-gradient(rgba(16, 29, 44, 0.6), rgba(16, 29, 44, 0.4)), url(./Assets/Images/home1.jpg);
   background-size: cover;
-  background-position: 50%; }
+  background-position: 50%;
+  position: relative; }
 
 .constructions {
   grid-column: 1 / -1;
