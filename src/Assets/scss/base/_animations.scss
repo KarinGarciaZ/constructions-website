@@ -1,0 +1,15 @@
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translate(-80%) rotate(200deg);
+  }
+
+  70% {
+    transform: translate(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0) rotate(0);
+  }
+}
