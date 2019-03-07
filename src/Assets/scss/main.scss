@@ -1,5 +1,6 @@
 @import './base/base';
-@import './base//utilities';
+@import './base/utilities';
+@import './base/animations';
 
 @import './components/button';
 @import './components/construction-card';
@@ -16,6 +17,7 @@
 @import './pages/construction';
 @import './pages/about-us';
 
+@import './sections/carousel-services';
 @import './sections/form';
 @import './sections/carrusel-constructions';
 @import './sections/about-company';

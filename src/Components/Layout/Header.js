@@ -4,17 +4,61 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../Assets/Images/logo.png';
 
 class Header extends Component {
-  render() {
 
-    let classes = ['header']
-    if( this.props.classes )
-      classes.push(this.props.classes)
+  state = {
+    extraClasses: {
+      transparent: true,
+      active: false
+    }
+  }
+
+  shouldComponentUpdate( nextProps, nextState ) {
+    if( this.state.extraClasses.active !== nextState.extraClasses.active ||  this.state.extraClasses.transparent !== nextState.extraClasses.transparent)
+      return true;
+    return false;
+  }
+
+  listenScrollEvent = e => {
+    let classes = { ...this.state.extraClasses }
+
+    if ((window.scrollY > 450) || ((window.scrollY <= 450 && window.scrollY > 250) && classes.active))
+      classes.transparent = false;
+    else
+      classes.transparent = true;
+    
+
+    this.setState({extraClasses: classes})
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenScrollEvent)
+  }
+
+  onHandleMenu = () => {
+    let classes = { ...this.state.extraClasses }
+    classes.active = !classes.active;
+    this.setState({extraClasses: classes})
+  }
+
+  goToHome = () => {
+    this.props.history.push('/')
+  }
+
+  render() {
+    let classes = ['header'];
+    if ( this.state.extraClasses.transparent && this.props.fromHome )
+      classes.push('transparent')
+    if ( this.state.extraClasses.active )
+      classes.push('active')
 
     return (
       <div className={classes.join(' ')}>
         <div className='company'>
-          <img className='company__logo' src={logo} alt='img_logo'/>
-          <span className='company__name'>company name</span>
+          <img className='company__logo' src={logo} alt='img_logo' onClick={this.goToHome}/>
+          <span className='company__name' onClick={this.goToHome}>company name</span>
+        </div>
+        <div className='mobile-menu' onClick={this.onHandleMenu}>
+          <div className='mobile-menu-content'></div>
         </div>
         <NavLink to='/all-constructions' activeClassName='nav-active' className='nav' >
           Our Constructions

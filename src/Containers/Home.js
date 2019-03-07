@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 import Header from '../Components/Layout/Header';
 import EmailSection from '../Components/Sections/Form';
@@ -9,35 +10,20 @@ import CarouselServices from '../Components/Sections/CarouselServices';
 
 class Home extends Component { 
 
-  state = {
-    colorHeader: 'transparent'
-  }
-
-  listenScrollEvent = e => {
-    if (window.scrollY > 450) {
-      this.setState({colorHeader: ''})
-    } else {
-      this.setState({colorHeader: 'transparent'})
-    }
-  }
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.listenScrollEvent)
-  }
-
-  shouldComponentUpdate( nextProps, nextState ) {
-    if( this.state.colorHeader !== nextState.colorHeader )
-      return true;
-    return false;
-  }
-
   render() {
+    
+    let props = { ...this.props };
 
     return (
       <div className='home'>
-        <Header classes={this.state.colorHeader} />
+        <Header fromHome={true} {...props}/>
 
-        <div className='image-container'></div>
+        <div className='image-container'>
+          <div className='midcontainer'>
+            <p className='text--image'>your best option!</p>
+            <Link to='/all-constructions' className='btn--image'>Discober our constructions</Link>
+          </div>          
+        </div>
 
         <CarouselServices />
 

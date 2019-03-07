@@ -10,7 +10,7 @@
   grid-template-columns: 1fr repeat(3, max-content);
   grid-column-gap: 5rem;
 
-  padding: 1.8rem 8rem 1.8rem 5rem;
+  padding: 1.5rem 8rem 1.5rem 5rem;
   text-transform: capitalize;  
   z-index: 5;
 
@@ -18,7 +18,7 @@
 }
 
 .transparent { 
-  background-color: #FFFFFF11;
+  background-color: #FFFFFF00;
   padding: 3rem 8rem 3rem 5rem;
 }
 
@@ -26,15 +26,18 @@
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, max-content);
-  grid-column-gap: 2rem;
+  grid-column-gap: 4rem;
 
-  &__logo {
-    max-height: 100%;
+  &__logo {    
+    cursor: pointer;
+    max-height: 3rem;
   }
 
-  &__name {    
+  &__name {        
+    cursor: pointer;
     color: white;
     font-size: 2rem;
+    font-weight: 500;
   }
 }
 
@@ -42,6 +45,10 @@
   text-decoration: none;
   color: white;
   font-size: 2rem;
+}
+
+.mobile-menu {
+  display: none;
 }
 
 @media only screen and (max-width: $bp-900) {
@@ -55,10 +62,73 @@
   }
 }
 
-@media only screen and (max-width: $bp-600) {
-  .company {  
-    &__name {    
-      display: none;
+@media only screen and (max-width: $bp-600) { 
+  .nav {
+    display: none;
+  }
+
+  .mobile-menu{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 4 / 5;      
+    width: 3rem;
+
+    &:hover {
+      cursor: pointer;     
     }
+
+    &-content {      
+      transition: all .3s;
+      height: 2px;
+      background-color: $color-secondary-background;
+  
+      &::before {
+        content: '';
+        transform: translateY(-6px);
+        display: block;
+        height: 2px;
+        background-color: $color-secondary-background;
+      }
+  
+      &::after {
+        content: '';
+        transform: translateY(4px);
+        display: block;
+        height: 2px;
+        background-color: $color-secondary-background;
+      }
+    }    
+  }
+
+  .transparent.active{      
+    background-color: #FFFFFF22;
+  }
+
+  .active{
+    grid-gap: 1.5rem;    
+
+    .mobile-menu-content {       
+      transition: all .3s;     
+      transform: rotate(45deg);
+  
+      &::before {
+        content: '';
+        transform: rotate(90deg);
+        display: block;
+        height: 2px;
+        background-color: $color-secondary-background;
+      }
+  
+      &::after {
+        display: none;
+      }
+    }
+
+    .nav {
+      grid-column: 1 / -1;
+      display: initial;
+      text-align: center;
+    }    
   }
 }
