@@ -4,6 +4,8 @@ import Header from '../Components/Layout/Header';
 import DescriptionCard from '../Components/Cards/DescriptionCard';
 import EmailSection from '../Components/Sections/Form';
 import TeamImage from '../Assets/Images/team.jpg';
+import TeamImage2 from '../Assets/Images/team2.jpg';
+import TeamImage3 from '../Assets/Images/team3.jpg';
 import BusinessImage from '../Assets/Images/businessman.png';
 
 class AboutUs extends Component {
@@ -22,7 +24,9 @@ class AboutUs extends Component {
 
           <div className='about-us__objectives'>
             <div className='about-us__objectives--img'>
-              <img src={TeamImage} alt='team-img'/>
+              <img src={TeamImage} alt='team-img' className='about-us__objectives--img-1'/>
+              <img src={TeamImage2} alt='team-img' className='about-us__objectives--img-2'/>
+              <img src={TeamImage3} alt='team-img' className='about-us__objectives--img-3'/>
             </div>
             <div className='about-us__objectives--team'>
               <DescriptionCard title='Who are we?'>
