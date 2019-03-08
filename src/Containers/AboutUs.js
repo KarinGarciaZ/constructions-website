@@ -7,6 +7,7 @@ import TeamImage from '../Assets/Images/team.jpg';
 import TeamImage2 from '../Assets/Images/team2.jpg';
 import TeamImage3 from '../Assets/Images/team3.jpg';
 import BusinessImage from '../Assets/Images/businessman.png';
+import MB from '../Assets/Images/mb.jpg';
 
 class AboutUs extends Component {
   render() {    
@@ -52,7 +53,7 @@ class AboutUs extends Component {
           <div className='about-us__team-members'>
             <div className='about-us__team-members--card'>
               <figure className='about-us__team-members--card-shape'>
-                <img src={TeamImage} alt='team-img' />
+                <img src={BusinessImage} alt='team-img' />
                 <span>Oscar Garcia</span>
               </figure>
               <div className='about-us__team-members--card-text'>
@@ -68,11 +69,11 @@ class AboutUs extends Component {
 
             <div className='about-us__team-members--card'>
               <figure className='about-us__team-members--card-shape'>
-                <img src={BusinessImage} alt='team-img' />
-                <span>Carlos Pérez</span>
+                <img src={MB} alt='team-img' />
+                <span>Marcos & Brandon</span>
               </figure>
               <div className='about-us__team-members--card-text'>
-                <h2>Manager</h2>
+                <h2>Managers</h2>
                 <p>
                   Refinery29 is a trailblazing digital-media and entertainment company for young women with a 
                   global audience footprint of 550 million across all platforms.

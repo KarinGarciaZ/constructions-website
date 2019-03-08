@@ -583,7 +583,7 @@ body {
         position: relative; }
         .about-us__team-members--card-shape img {
           height: 100%;
-          transform: scale(1.3) translateX(-3rem);
+          transform: scale(1.3) translateX(-4rem);
           transition: all .3s; }
         .about-us__team-members--card-shape span {
           position: absolute;
