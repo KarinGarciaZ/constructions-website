@@ -39,6 +39,9 @@
     &--img {
       grid-column: 1 / span 2;
       grid-row: 1 / span 2;
+      max-height: 49rem;
+      top: 50%;
+      transform: translateY(-50%);
       position: relative;
 
       img {
@@ -104,64 +107,78 @@
     grid-template-columns: [container-starts] minmax(6rem, 1fr)
       [center-starts] repeat( 12, [col-starts] minmax(min-content, 8rem) [col-ends] ) [center-ends]
       minmax(6rem, 1fr) [container-ends];
-    grid-row-gap: 5rem;
+    grid-row-gap: 5rem;    
+  }
+}
 
-    &--card {
-      grid-column: center-starts / center-ends;
-      padding: 4rem;
-      background-color: $color-white-trans;
-      transform: skewX(12deg);
-      display: flex;
 
-      &-shape {
-        height: 15rem;
-        width: 15rem;
-        shape-outside: circle(50% at 50% 50%);
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
-        -webkit-clip-path: circle(50% at 50% 50%);
-        transform: skewX(-12deg);
-        position: relative;
+@media only screen and (max-width: $bp-1100) {
+  .about-us{
+    &__objectives {
+      grid-gap: 1rem;
 
-        img{
-          height: 100%;
-          transform: scale(1.3) translateX(-4rem);
-          transition: all .3s;
+      &--img {
+        max-height: 35rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-600) {
+  .about-us{
+    &__objectives {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+
+      &--img {        
+        grid-column: 1 / -1;
+        grid-row: 3 /  4;
+        top: 0;
+        transform: translateX(0);
+        max-height: 40rem;
+        height: 40rem;
+
+        &-1 {
+          left: 5%;
         }
-
-        span {
-          position: absolute;
-          transition: all .3s;
-          top: 90%;
-          left: 50%;
-          font-size: 1.8rem;
-          color: white;
-          transform: translateX(-50%);
-          text-align: center;
-          opacity: 0;
+  
+        &-2 {
+          left: 40%;
+        }
+  
+        &-3 {
+          left: 25%;
         }
       }
 
-      &-text {
-        transform: skewX(-12deg);
-        margin-left: 3rem;
-
-        h2{ font-size: 2.5rem; }
-        p { font-size: 1.4rem; }
+      &--team {
+        grid-column: 1 / -1;
       }
-      
-      &:hover{
+    
+      &--mision {
+        grid-column: 1 / 2;
+      }
+    
+      &--vision {
+        grid-column: 2 / 3;
+      }
+    }
+  }
+}
 
-        img{          
-          transform: scale(1) translateX(-3rem);;
-          filter: blur(1px) brightness(70%);
-        }
+@media only screen and (max-width: $bp-500) {
+  .about-us{
+    &__objectives {
+      padding: 5rem 0 0 0;
+    }
+  }
+}
 
-        span {
-          top: 50%;
-          transform: translateY(-50%) translateX(-50%);
-          opacity: 1;
-        }
+@media only screen and (max-width: $bp-400) {
+  .about-us{
+    &__objectives {
+      &--img {        
+        height: 30rem;
       }
     }
   }

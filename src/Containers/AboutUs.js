@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import Header from '../Components/Layout/Header';
 import DescriptionCard from '../Components/Cards/DescriptionCard';
 import EmailSection from '../Components/Sections/Form';
+import TeamMemberCard from '../Components/Cards/TeamMemberCard';
+
 import TeamImage from '../Assets/Images/team.jpg';
 import TeamImage2 from '../Assets/Images/team2.jpg';
 import TeamImage3 from '../Assets/Images/team3.jpg';
@@ -33,9 +35,9 @@ class AboutUs extends Component {
               <DescriptionCard title='Who are we?'>
                 Refinery29 is a trailblazing digital-media and entertainment company for young women with a 
                 global audience footprint of 550 million across all platforms.
-                We deliver style and substance to an audience that's highly engaged across a variety of devices and destinations, 
-                from original video and features, to live experiences and social storytelling. Our audience is comprised of determined 
-                dreamers who are smart and passionate, always seeking out the full potential in every aspect of their lives.
+                Refinery29 is a trailblazing digital-media and entertainment company for young women with a 
+                global audience footprint of 550 million across all platforms.
+                We deliver style and substance to an audience that's highly engaged across a variety of devices and destinations.
               </DescriptionCard>
             </div>
             <div className='about-us__objectives--mision'>
@@ -51,36 +53,18 @@ class AboutUs extends Component {
           </div>          
 
           <div className='about-us__team-members'>
-            <div className='about-us__team-members--card'>
-              <figure className='about-us__team-members--card-shape'>
-                <img src={BusinessImage} alt='team-img' />
-                <span>Oscar Garcia</span>
-              </figure>
-              <div className='about-us__team-members--card-text'>
-                <h2>President</h2>
-                <p>
-                  Refinery29 is a trailblazing digital-media and entertainment company for young women with a 
-                  global audience footprint of 550 million across all platforms.
-                  We deliver style and substance to an audience that's highly engaged across a variety of devices and destinations, 
-                  from original video and features, to live experiences and social storytelling.
-                </p>
-              </div>
-            </div>
+            <TeamMemberCard rank='President' name='Oscar Garcia' image={BusinessImage}>
+              Refinery29 is a trailblazing digital-media and entertainment company for young women with a 
+              global audience footprint of 550 million across all platforms.
+              We deliver style and substance to an audience that's highly engaged across a variety of devices and destinations, 
+              from original video and features, to live experiences and social storytelling.
+            </TeamMemberCard>
 
-            <div className='about-us__team-members--card'>
-              <figure className='about-us__team-members--card-shape'>
-                <img src={MB} alt='team-img' />
-                <span>Marcos & Brandon</span>
-              </figure>
-              <div className='about-us__team-members--card-text'>
-                <h2>Managers</h2>
-                <p>
-                  Refinery29 is a trailblazing digital-media and entertainment company for young women with a 
-                  global audience footprint of 550 million across all platforms.
-                  We deliver style and substance to an audience that's highly engaged across a variety of devices and destinations, 
-                </p>
-              </div>
-            </div>
+            <TeamMemberCard rank='Managers' name='Marcos & Brandon' image={MB}>
+              Refinery29 is a trailblazing digital-media and entertainment company for young women with a 
+              global audience footprint of 550 million across all platforms.
+              We deliver style and substance to an audience that's highly engaged across a variety of devices and destinations, 
+            </TeamMemberCard>
           </div>          
           
           <EmailSection classes='background-blue' />
