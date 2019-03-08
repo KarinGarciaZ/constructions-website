@@ -292,7 +292,7 @@ body {
 
 .about-us__team-members--card {
   grid-column: center-starts / center-ends;
-  padding: 4rem;
+  padding: 3rem;
   background-color: #FFFFFFCC;
   transform: skewX(12deg);
   display: flex; }
@@ -321,7 +321,8 @@ body {
       opacity: 0; }
   .about-us__team-members--card-text {
     transform: skewX(-12deg);
-    margin-left: 3rem; }
+    margin-left: 3rem;
+    text-align: justify; }
     .about-us__team-members--card-text h2 {
       font-size: 2.5rem; }
     .about-us__team-members--card-text p {
@@ -333,6 +334,32 @@ body {
     top: 50%;
     transform: translateY(-50%) translateX(-50%);
     opacity: 1; }
+
+@media only screen and (max-width: 68.75em) {
+  .about-us__team-members--card {
+    padding: 2rem; }
+    .about-us__team-members--card-shape {
+      height: 13rem;
+      width: 13rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .about-us__team-members--card {
+    flex-direction: column;
+    align-items: center;
+    transform: skewX(7deg); }
+    .about-us__team-members--card-shape {
+      transform: skewX(-7deg); }
+      .about-us__team-members--card-shape img {
+        filter: brightness(70%); }
+      .about-us__team-members--card-shape span {
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        opacity: 1; }
+    .about-us__team-members--card-text {
+      margin-left: 0;
+      transform: skewX(0); }
+      .about-us__team-members--card-text p {
+        transform: skewX(0); } }
 
 .header {
   grid-column: 1 / -1;

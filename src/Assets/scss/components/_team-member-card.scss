@@ -1,6 +1,6 @@
 .about-us__team-members--card {
   grid-column: center-starts / center-ends;
-  padding: 4rem;
+  padding: 3rem;
   background-color: $color-white-trans;
   transform: skewX(12deg);
   display: flex;
@@ -37,6 +37,7 @@
   &-text {
     transform: skewX(-12deg);
     margin-left: 3rem;
+    text-align: justify;
 
     h2{ font-size: 2.5rem; }
     p { font-size: 1.4rem; }
@@ -45,7 +46,7 @@
   &:hover{
 
     img{          
-      transform: scale(1) translateX(-4rem);;
+      transform: scale(1) translateX(-4rem);
       filter: blur(1px) brightness(70%);
     }
 
@@ -53,6 +54,49 @@
       top: 50%;
       transform: translateY(-50%) translateX(-50%);
       opacity: 1;
+    }
+  }
+}
+
+
+@media only screen and (max-width: $bp-1100) {
+  .about-us__team-members--card {
+    padding: 2rem;
+
+    &-shape {
+        height: 13rem;
+        width: 13rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-600) {
+  .about-us__team-members--card {
+    flex-direction: column;
+    align-items: center;
+    transform: skewX(7deg);
+
+    &-shape {      
+      transform: skewX(-7deg);
+
+      img{          
+        filter: brightness(70%);
+      }
+
+      span {
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        opacity: 1;
+      }
+    }
+
+    &-text {
+      margin-left: 0;
+      transform: skewX(0);
+
+       p {
+        transform: skewX(0);
+      }  
     }
   }
 }
