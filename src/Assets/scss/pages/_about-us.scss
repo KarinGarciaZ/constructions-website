@@ -171,6 +171,14 @@
     &__objectives {
       padding: 5rem 0 0 0;
     }
+
+    &__team-members {
+      padding: 5rem 0;
+      grid-template-columns: [container-starts] minmax(4rem, 1fr)
+        [center-starts] repeat( 12, [col-starts] minmax(min-content, 8rem) [col-ends] ) [center-ends]
+        minmax(4rem, 1fr) [container-ends];
+      grid-row-gap: 3rem;    
+    }
   }
 }
 
