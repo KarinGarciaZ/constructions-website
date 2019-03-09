@@ -1,3 +1,37 @@
 .sidebar {
+  grid-column: sidebar-starts / sidebar-ends;
+  background-color: $color-secondary-card;
+  min-height: 50vh;
+  padding: 4rem 0;
 
+  display: grid;
+  grid-template-rows: repeat(6, min-content);
+  grid-row-gap: 3rem;
+
+  &__title {
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 1px solid black;
+    text-transform: capitalize;
+    justify-self: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+
+    &--label {
+      font-size: 1.4rem;
+      text-transform: capitalize;
+    }
+
+    &--input {
+      outline: none;
+      border: 2px solid $color-primary-light-3;
+      padding: .3rem 1rem;
+      border-radius: 4px;
+      width: 100%;
+    }
+  }
 }
