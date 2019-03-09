@@ -4,9 +4,19 @@
   background-color: $color-primary-light-5;
 
   display: grid;
-  grid-template-rows: repeat(6, min-content);
+  grid-template-rows: repeat(2, min-content);
   grid-template-columns:
-    [full-start] minmax(2rem, 1fr) 
-    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) 
-    [center-end] minmax(2rem, 1fr) [full-end];
+    [sidebar-starts] 22rem [sidebar-ends full-starts]
+    minmax(2rem, 1fr) 
+    [center-starts] repeat(8, [col-starts] minmax(min-content, 14rem) [col-ends]) 
+    [center-ends] minmax(2rem, 1fr) [full-ends];
+
+  &__container {
+    margin: 8rem 0;
+    grid-column: center-starts / center-ends;
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: repeat( auto-fit, 25rem);
+    justify-content: center;
+  }
 }
