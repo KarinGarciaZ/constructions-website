@@ -21,15 +21,15 @@ class Home extends Component {
         <div className='image-container'>
           <div className='midcontainer'>
             <p className='text--image'>your best option!</p>
-            <Link to='/all-constructions' className='btn--image'>Discober our constructions</Link>
+            <Link to='/all-constructions' className='btn--image'>Discover our constructions</Link>
           </div>          
         </div>
 
         <CarouselServices />
 
-        <AboutCompanySection />
+        <AboutCompanySection { ...props }/>
 
-        <CarruselConstructions { ...this.props } />
+        <CarruselConstructions { ...props } />
 
         <EmailSection />
       </div>

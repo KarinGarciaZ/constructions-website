@@ -8,8 +8,12 @@ const ConstructionCard = ( props ) => {
   let imageUrl = construction.images.filter( image => image.mainImage? true : false )[0].url;
   imageUrl = 'http://localhost:3001/' + imageUrl;
 
+  let classes = ['construction-card'];
+  if ( props.cardSize )
+    classes.push(props.cardSize);
+
   return (
-    <div className='construction-card'>
+    <div className={classes.join(' ')}>
       <img className='construction-card__image' src={imageUrl} alt='Construction img'></img>
       <h3 className='construction-card__title'>{construction.title}</h3>
 

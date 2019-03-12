@@ -3,6 +3,11 @@ import employeeImage from '../../Assets/Images/employee.jpg';
 import architectsImage from '../../Assets/Images/architects.jpg';
 
 class AboutCompany extends Component {
+
+  handleClick = () => {
+    this.props.history.push('/about-us');
+  }
+
   render() {
     return (
       <div className='about-company'>
@@ -21,7 +26,7 @@ class AboutCompany extends Component {
           <p className='about-company__info--message'>
             "We'll be the best decision in your life."
           </p>
-          <button className='btn about-company__info--btn'>Know more about us</button>
+          <button className='btn about-company__info--btn' onClick={this.handleClick}>Know more about us</button>
         </div>
       </div>
     )

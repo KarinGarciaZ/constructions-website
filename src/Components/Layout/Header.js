@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 import logo from '../../Assets/Images/logo.png';
 
 class Header extends Component {
@@ -57,6 +59,10 @@ class Header extends Component {
           <img className='company__logo' src={logo} alt='img_logo' onClick={this.goToHome}/>
           <span className='company__name' onClick={this.goToHome}>company name</span>
         </div>
+        { this.props.optionsIcon? 
+          <FontAwesomeIcon icon={faSlidersH} className='header__settings' onClick={this.props.iconClicked}/> 
+          : null
+        }
         <div className='mobile-menu' onClick={this.onHandleMenu}>
           <div className='mobile-menu-content'></div>
         </div>

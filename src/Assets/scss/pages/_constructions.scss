@@ -1,12 +1,82 @@
 .constructions {
   grid-column: 1 / -1;
-  min-height: 57vh;
+  min-height: 66vh;
   background-color: $color-primary-light-5;
 
   display: grid;
-  grid-template-rows: repeat(6, min-content);
+  grid-template-rows: repeat(2, min-content);
   grid-template-columns:
-    [full-start] minmax(2rem, 1fr) 
-    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) 
-    [center-end] minmax(2rem, 1fr) [full-end];
+    [sidebar-starts] 21rem [sidebar-ends full-starts]
+    minmax(2rem, 1fr) 
+    [center-starts] repeat(8, [col-starts] minmax(min-content, 14rem) [col-ends]) 
+    [center-ends] minmax(2rem, 1fr) [full-ends];
+
+  &__container {
+    margin: 3rem 0 8rem 0;
+    grid-column: center-starts / center-ends;
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: repeat( auto-fit, 25rem);
+    justify-content: center;
+
+    &--title {
+      grid-column: 1 / -1;
+      font-size: 3rem;
+      font-weight: 500;
+      color: $color-secondary;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-1100) {
+  .constructions {
+    grid-template-columns:
+      minmax(2rem, 1fr) 
+      [center-starts] repeat(8, [col-starts] minmax(min-content, 14rem) [col-ends]) 
+      [center-ends] minmax(2rem, 1fr) [full-ends];
+  
+    &__container {  
+      &--title {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-600) {
+  .constructions {
+    grid-template-columns:
+      minmax(1rem, 1fr) 
+      [center-starts] repeat(8, [col-starts] minmax(min-content, 14rem) [col-ends]) 
+      [center-ends] minmax(1rem, 1fr) [full-ends];
+  
+    &__container {  
+      grid-gap: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-500) {
+  .constructions {  
+    &__container {  
+      grid-row-gap: 2rem;
+      grid-column-gap: 1rem;
+      grid-template-columns: repeat( auto-fit, 23rem);
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-500) {
+  .constructions {  
+    &__container {  
+      grid-row-gap: 2rem;
+      grid-template-columns: repeat( auto-fit, 27rem);
+
+      &--title {
+        font-size: 1.8rem;
+      }
+    }
+  }
 }

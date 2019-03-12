@@ -57,6 +57,36 @@
   }
 }
 
+.construction-card-small {  
+  grid-gap: 2rem;  
+
+  .construction-card__image {
+    height: 18rem;
+  }
+
+  .construction-card__title {
+    font-size: 1.6rem;
+    padding: 1rem 1rem;      
+    margin-top: -4rem;
+  }
+
+  .construction-card__info {
+    margin-left: 1.5rem;
+    
+    p {
+      font-size: 1.3rem;
+    }    
+  }
+
+  .construction-card__icon {
+    font-size: 2rem;
+  }
+
+  .construction-card__btn {
+    padding: 1.6rem;
+  }
+}
+
 @media only screen and (max-width: $bp-1200) {
   .construction-card {  
     grid-gap: 2rem;  
@@ -92,5 +122,9 @@
 @media only screen and (max-width: $bp-500) {
   .construction-card {  
     transform: scale(1.2);
+  }
+
+  .construction-card-small {  
+    transform: scale(1);
   }
 }
