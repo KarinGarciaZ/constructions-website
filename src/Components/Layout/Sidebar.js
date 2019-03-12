@@ -38,10 +38,13 @@ class Sidebar extends Component {
       )
     }
 
+    let classes = ['sidebar'];
+    if (this.props.sidebarDefault)
+      classes.push('sidebar-hide')
 
     return (
-      <div className='sidebar'>
-        <p className='sidebar__title'>Filter construction</p>
+      <div className={classes.join(' ')}>
+        <p className='sidebar__title'>{this.props.title}</p>
         {newElements}
       </div>
     )

@@ -1,7 +1,7 @@
-.sidebar {
+.sidebar  {
   grid-column: sidebar-starts / sidebar-ends;
   background-color: $color-secondary-card;
-  min-height: 50vh;
+  min-height: 60vh;
   padding: 4rem 0;
 
   display: grid;
@@ -33,5 +33,32 @@
       border-radius: 4px;
       width: 100%;
     }
+  }
+}
+
+@media only screen and (max-width: $bp-1100) {
+  .sidebar {
+    grid-column: 1 / -1;
+    min-height: 5vh;
+    padding: 1rem 0;
+  
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    grid-row-gap: 1.5rem;
+  
+    &__title {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-600) {
+  .sidebar {  
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, min-content);
+  }
+
+  .sidebar-hide {  
+    display: none;
   }
 }
