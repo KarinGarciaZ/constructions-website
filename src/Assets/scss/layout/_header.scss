@@ -15,6 +15,10 @@
   z-index: 5;
 
   transition: all .4s;
+
+  &__settings {
+    display: none;
+  }
 }
 
 .transparent { 
@@ -54,7 +58,7 @@
 @media only screen and (max-width: $bp-900) {
   .header {
     grid-column-gap: 2.5rem;
-    padding: 1.8rem 4rem;    
+    padding: 1.5rem 4rem;    
   }
 
   .transparent {
@@ -63,6 +67,15 @@
 }
 
 @media only screen and (max-width: $bp-600) { 
+
+  .header__settings{
+    display: initial;
+    font-size: 3rem;
+    color: white;
+    align-self: center;
+    cursor: pointer;
+  }
+
   .nav {
     display: none;
   }
