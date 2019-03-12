@@ -27,9 +27,9 @@ class Home extends Component {
 
         <CarouselServices />
 
-        <AboutCompanySection />
+        <AboutCompanySection { ...props }/>
 
-        <CarruselConstructions { ...this.props } />
+        <CarruselConstructions { ...props } />
 
         <EmailSection />
       </div>
