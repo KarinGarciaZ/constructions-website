@@ -8,6 +8,7 @@ import ConstructionCard from '../Components/Cards/ConstructionCard';
 class Constructions extends Component {
 
   state = {
+    sidebarDefault: true,
     constructions: [],
     originalConstructions: [],
     sidebarElements: {
@@ -116,6 +117,12 @@ class Constructions extends Component {
     this.setState({ sidebarElements: elements, constructions })    
   }
   
+  onOptionsIconClick = () => {
+    this.setState( state => { 
+      return { sidebarDefault: !state.sidebarDefault }
+    })
+  }
+
   onClickCard = (id) => {
     this.props.history.push('/construction/'+id)
   }
@@ -127,14 +134,19 @@ class Constructions extends Component {
     let constructions = [ ...this.state.constructions ]
 
     let constructionCards = constructions.map( construction => {
-      return <ConstructionCard construction={construction} cardSize='construction-card-small' key={construction.id} clicked={this.onClickCard}/>
+      return <ConstructionCard construction={construction} cardSize='construction-card-small' key={construction.id} clicked={this.onClickCard.bind(this)}/>
     })
+
+    let title = '';
+    if( constructions.length ) 
+      title = 'These are our projects, get facinated with them!'
 
     return (
       <div className='constructions'>
-        <Header { ...props }/>
-        <Sidebar elements={sidebarElements} changed={this.onChangeValue}/>
+        <Header { ...props } optionsIcon={true} iconClicked={this.onOptionsIconClick}/>
+        <Sidebar elements={sidebarElements} changed={this.onChangeValue} title='Filter construction by:' sidebarDefault={this.state.sidebarDefault}/>
         <div className='constructions__container'>
+          <p className='constructions__container--title'>{title}</p>
           {constructionCards}
         </div>
       </div>
