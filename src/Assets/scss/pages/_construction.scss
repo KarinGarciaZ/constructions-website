@@ -1,0 +1,128 @@
+.construction {
+  grid-column: 1 / -1;
+  min-height: 73vh;
+  margin-bottom: 5rem;
+
+  display: grid;  
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: [full-starts] 1fr [center-starts]
+    repeat(10, [col-starts] minmax(min-content, 12rem) [col-ends] )
+    [center-ends] 1fr [full-ends];
+
+
+  &__content {
+    grid-column: center-starts / center-ends;    
+    display: grid;
+    grid-template-columns: repeat( 20, [col-starts] 1fr [col-ends] );
+    grid-gap: 5rem;
+    background-color: $color-primary-light-5;
+
+    &--border {      
+      grid-column: col-starts 6 / col-ends 15;
+      border-top: 1px solid $color-primary-light-3;
+    }
+   
+    &--image {
+      grid-column: 1 / -1;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 45rem;        
+        filter: brightness(90%); 
+      }
+    }
+
+    &--images {
+      grid-column: col-starts 1 / col-ends 10;
+      margin-left: 1rem;
+      display: grid;
+      grid-template-columns: repeat( 4, 1fr );    
+      align-content: start;
+      align-items: center;
+      justify-items: center;
+
+      &-main{        
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        img {
+          object-fit: cover;
+          height: 33rem;  
+          width: 100%;  
+        }   
+      }
+
+      &-img{
+        object-fit: cover;
+        height: 9rem;  
+        width: 100%;     
+        cursor: pointer;   
+      }
+
+      &-active {
+        filter: brightness(50%);
+      }
+    }
+
+    &--info {
+      grid-column: col-starts 11 / col-ends 20;
+      margin-right: 1rem;
+      display: grid;
+      align-content: start;
+      grid-row-gap: 1rem;
+
+      &-title {
+        font-size: 3rem;
+        text-transform: capitalize;
+      }
+
+      &-type {
+        font-size: 2.5rem;
+        p {
+          font-size: 1.4rem;
+        }
+      }
+
+      &-location {
+        font-size: 2rem;
+        text-transform: capitalize;
+        p {
+          font-size: 1.4rem;
+        }
+      }
+
+      &-description {
+        font-weight: 400;
+        font-size: 1.2rem;
+        text-align: justify;
+
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    &--constructions {
+      grid-column: 1 / -1;
+
+      display: grid;
+      grid-template-columns: repeat( 3, [col-starts] 27rem [col-ends] );
+      grid-gap: 5rem;
+      justify-content: center;
+
+      h4 {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-size: 2.5rem;
+        color: $color-secondary;
+        text-transform: capitalize;
+      }
+    }
+
+    &--button {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
