@@ -23,13 +23,29 @@
     }
    
     &--image {
-      grid-column: 1 / -1;
+      grid-column: col-starts 2 / col-ends 19;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+
+      &-title {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        background-color: $color-black-trans;
+        padding: 2rem 8rem;
+        color: white;
+        font-size: 5rem;
+        text-transform: capitalize;
+        z-index: 2;
+      }
 
       img {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
         object-fit: cover;
         width: 100%;
-        max-height: 45rem;        
-        filter: brightness(90%); 
+        max-height: 40rem;        
+        filter: brightness(90%) blur(.7px); 
       }
     }
 
@@ -41,6 +57,7 @@
       align-content: start;
       align-items: center;
       justify-items: center;
+      grid-gap: 3px;
 
       &-main{        
         grid-column: 1 / -1;
@@ -80,6 +97,7 @@
         font-size: 2.5rem;
         p {
           font-size: 1.4rem;
+          margin-bottom: -1rem;
         }
       }
 
@@ -87,7 +105,8 @@
         font-size: 2rem;
         text-transform: capitalize;
         p {
-          font-size: 1.4rem;
+          font-size: 1.4rem;          
+          margin-bottom: -1rem;
         }
       }
 
@@ -124,5 +143,158 @@
       display: flex;
       justify-content: center;
     }
+  }
+}
+
+@media only screen and (max-width: $bp-1000) {
+  .construction {
+    &__content {
+      grid-column-gap: 3rem;
+
+      &--constructions {
+        grid-gap: 3rem;
+      }
+    }    
+  }
+}
+
+@media only screen and (max-width: $bp-900) {
+  .construction {
+    &__content {
+      grid-column-gap: 3rem;
+
+      &--images {
+        &-img{
+          height: 8rem;   
+        }
+      }
+
+      &--constructions {
+        grid-gap: 1.6rem;
+        grid-template-columns: repeat( 3, [col-starts] 25rem [col-ends] );     
+      }
+    }    
+  }
+}
+
+@media only screen and (max-width: $bp-800) {
+  .construction {
+    &__content {
+
+      &--images {
+        &-main{        
+          img {
+            height: 28rem;  
+          }   
+        }
+      }
+    }    
+  }
+}
+
+@media only screen and (max-width: $bp-700) {
+  .construction {
+    &__content {
+      grid-gap: 3rem;
+
+      &--image {
+        img {
+          max-height: 30rem;        
+        }
+      }
+
+      &--info {        
+        grid-row-gap: 2px;
+
+        &-title {
+          display: none;
+        }
+      }
+
+      &--constructions {
+        grid-template-columns: repeat( 3, [col-starts] 23rem [col-ends] );     
+      }
+    }    
+  }
+}
+
+@media only screen and (max-width: $bp-600) {
+  .construction {
+    &__content {
+      grid-column-gap: 2rem;    
+
+      &--image {
+        grid-column: col-starts 1 / col-ends 20;
+
+        &-title {
+          padding: 2rem 5rem;
+          font-size: 3.5rem;
+        }
+      }
+
+      &--images {
+        grid-column: col-starts 2 / col-ends 19;
+        &-main{        
+          img {
+            height: 33rem;  
+          }   
+        }
+      }
+
+      &--info {        
+        grid-column: col-starts 2 / col-ends 19;
+      }
+
+      &--constructions {
+        grid-template-columns: repeat( 2, [col-starts] 26rem [col-ends] );  
+      }
+    }    
+  }
+}
+
+@media only screen and (max-width: $bp-500) {
+  .construction {
+    &__content {     
+      &--images {
+        &-main{        
+          img {
+            height: 29rem;  
+          }   
+        }
+      } 
+
+      &--constructions {
+        grid-template-columns: repeat( 2, [col-starts] 23rem [col-ends] );         
+      }
+    }    
+  }
+}
+
+@media only screen and (max-width: $bp-400) {
+  .construction {
+    &__content {    
+
+      &--image {
+        img {
+          max-height: 27rem;        
+        }
+      }
+
+      &--images {
+        &-main{        
+          img {
+            height: 27rem;  
+          }   
+        }
+      }
+
+      &--info {        
+        grid-column: col-starts 2 / col-ends 19;
+      }
+
+      &--constructions {
+        grid-template-columns: 27rem;    
+      }
+    }    
   }
 }
