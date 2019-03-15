@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import axios from '../../axios-connection';
 
 class Form extends Component {
 
@@ -20,6 +21,21 @@ class Form extends Component {
 
   sendMail = ( event ) => {
     event.preventDefault();
+    let form = { ...this.state.form };
+    let data = {
+      email: form.email,
+      name: form.name,
+      subject: form.subject,
+      message: form.message
+    }
+    axios.post('/reset/sendMessage', data)
+    .then( () => {
+      form.message = '';
+      form.name = '';
+      form.subject = '';
+      form.email = '';
+      this.setState({form})
+    })
   }
 
   render() {
