@@ -5,6 +5,7 @@ import facebook from '../../Assets/Images/facebook.png';
 import twitter from '../../Assets/Images/twitter.png';
 import instagram from '../../Assets/Images/instagram.png';
 import linkedin from '../../Assets/Images/linkedin.png';
+import github from '../../Assets/Images/github.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faMapMarkerAlt, faEnvelope, faLaptop } from "@fortawesome/free-solid-svg-icons";
 
@@ -56,6 +57,7 @@ class Footer extends Component {
           <div className='footer__container--contact-item'>            
             <FontAwesomeIcon icon={faLaptop} className='contact-icon'/>
             <p className='footer__copyright--text'>&copy;Created by <a href='https://github.com/KarinGarciaZ'>Oscar Jovanny Garcia Zepeda</a>. All Rights Reserved.</p>
+            <a href='https://github.com/KarinGarciaZ'><img src={github} alt='linkedin-icon' className='social-icon'/></a>
           </div>
         </div>
 
