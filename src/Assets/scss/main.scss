@@ -14,12 +14,12 @@
 @import './layout/sidebar';
 @import './layout/footer';
 
-@import './pages/home';
-@import './pages/constructions';
-@import './pages/construction';
-@import './pages/about-us';
-
 @import './sections/carousel-services';
 @import './sections/form';
 @import './sections/carrusel-constructions';
 @import './sections/about-company';
+
+@import './pages/home';
+@import './pages/constructions';
+@import './pages/construction';
+@import './pages/about-us';

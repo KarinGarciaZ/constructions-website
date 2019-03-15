@@ -145,10 +145,10 @@ class Constructions extends Component {
       <div className='constructions'>
         <Header { ...props } optionsIcon={true} iconClicked={this.onOptionsIconClick}/>
         <Sidebar elements={sidebarElements} changed={this.onChangeValue} title='Filter construction by:' sidebarDefault={this.state.sidebarDefault}/>
-        <div className='constructions__container'>
+        { constructions.length? <div className='constructions__container'>
           <p className='constructions__container--title'>{title}</p>
           {constructionCards}
-        </div>
+        </div> :null }
       </div>
     )
   }
