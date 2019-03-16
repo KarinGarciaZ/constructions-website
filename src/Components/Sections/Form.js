@@ -28,7 +28,7 @@ class Form extends Component {
       subject: form.subject,
       message: form.message
     }
-    axios.post('/reset/sendMessage', data)
+    axios.post('/mail/sendMessage', data)
     .then( () => {
       form.message = '';
       form.name = '';
