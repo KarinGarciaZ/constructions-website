@@ -62,7 +62,7 @@ class Constructions extends Component {
       })
     })
     .catch( err => {
-      console.log('err: ', err);
+      console.log('err: ', err.response);
     })    
   }
 

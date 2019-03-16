@@ -6,10 +6,15 @@ import ContentLayout from '../Components/Layout/ContentLayout';
 
 class Layout extends Component {
 
+  state = {
+    gotToken: false
+  }
+
   componentDidMount() {        
     axios.get('http://127.0.0.1:3001/auth/website-token')
     .then( resp => {
       localStorage.setItem('websiteToken', resp.data.token);
+      this.setState({gotToken: true})
     })
     .catch( error => {
       console.log(error.response)
@@ -19,7 +24,7 @@ class Layout extends Component {
   render() {
     return (
       <div className='container'>
-        <ContentLayout />
+        {this.state.gotToken? <ContentLayout /> : null}
         <Footer />
       </div>
     )
