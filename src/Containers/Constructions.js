@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import loading from '../Assets/Images/loading.png'
+import img404 from '../Assets/Images/404.jpg'
 import Header from '../Components/Layout/Header';
 import Sidebar from '../Components/Layout/Sidebar';
 import axios from '../axios-connection';
@@ -9,6 +11,7 @@ class Constructions extends Component {
 
   state = {
     sidebarDefault: true,
+    loadedContent: 'loading',
     constructions: [],
     originalConstructions: [],
     sidebarElements: {
@@ -52,7 +55,10 @@ class Constructions extends Component {
         let elements = { ...this.state.sidebarElements };
         elements.type.options = res.data;
         elements.type.options.unshift({ name: '', id: 0 })
-        this.setState({ constructions: data.data, originalConstructions: data.data, sidebarElements: elements })
+
+        let loadedContent =  data.data.length? 'constructions' : 'none';
+        
+        this.setState({ constructions: data.data, originalConstructions: data.data, sidebarElements: elements, loadedContent })
       })
     })
     .catch( err => {
@@ -114,7 +120,8 @@ class Constructions extends Component {
         return false
       })
     elements[key].value = value;
-    this.setState({ sidebarElements: elements, constructions })    
+    let loadedContent =  constructions.length? 'constructions' : 'none';
+    this.setState({ sidebarElements: elements, constructions, loadedContent })    
   }
   
   onOptionsIconClick = () => {
@@ -127,8 +134,7 @@ class Constructions extends Component {
     this.props.history.push('/construction/'+id)
   }
 
-  render() {
-    
+  render() {    
     let props = { ...this.props };
     let sidebarElements = { ...this.state.sidebarElements }
     let constructions = [ ...this.state.constructions ]
@@ -141,14 +147,45 @@ class Constructions extends Component {
     if( constructions.length ) 
       title = 'These are our projects, get facinated with them!'
 
+    let content = this.state.loadedContent;
+    let loadContent = null;
+    switch (content) {
+      case 'loading':
+        loadContent = <div className='constructions__container'>
+          <div className='constructions__container--loading'>
+            <img src={loading} alt='loading-icon' className='loading-icon'/>
+          </div>
+        </div>
+        break;
+      case 'constructions':
+        loadContent = <div className='constructions__container'>
+          <p className='constructions__container--title'>{title}</p>
+          {constructionCards}
+        </div>
+        break;
+      case 'none':
+        loadContent = <div className='constructions__container'>
+          <div className='constructions__container--none'>
+            <img src={img404} alt='loading-icon' className='img404'/>
+            <p>We couldn't find a construction with these characteristics.</p>
+          </div>
+        </div>
+        break;
+    
+      default:
+        loadContent = <div className='constructions__container'>
+          <div className='constructions__container--loading'>
+            <img src={loading} alt='loading-icon' className='loading-icon'/>
+          </div>
+        </div>
+        break;
+    }
+
     return (
       <div className='constructions'>
         <Header { ...props } optionsIcon={true} iconClicked={this.onOptionsIconClick}/>
-        <Sidebar elements={sidebarElements} changed={this.onChangeValue} title='Filter construction by:' sidebarDefault={this.state.sidebarDefault}/>
-        { constructions.length? <div className='constructions__container'>
-          <p className='constructions__container--title'>{title}</p>
-          {constructionCards}
-        </div> :null }
+        <Sidebar elements={sidebarElements} changed={this.onChangeValue} title='Filter constructions by:' sidebarDefault={this.state.sidebarDefault}/>
+        {loadContent}
       </div>
     )
   }

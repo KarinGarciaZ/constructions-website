@@ -54,7 +54,7 @@
   }
 }
 
-@media only screen and (max-width: $bp-600) {
+@media only screen and (max-width: $bp-500) {
   .carousel {  
     &-constructions-container {
       grid-template-columns: repeat( auto-fit, 30rem);

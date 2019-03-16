@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import ConstructionCard from '../Cards/ConstructionCard';
 import axios from '../../axios-connection';
+import Aux from '../../hoc/Auxiliar';
 
 class CarruselConstructions extends Component {
 
@@ -30,12 +31,15 @@ class CarruselConstructions extends Component {
     })
 
     return (
-      <div className='carousel'>
-        <h2 className='carousel__title u-title-2 u-margin-bottom-8'>Some of our works!</h2>
-        <div className='carousel-constructions-container'>
-          {carouselItems}
-        </div>
-      </div>
+      <Aux>
+        { constructions.length? <div className='carousel'>
+          <h2 className='carousel__title u-title-2 u-margin-bottom-8'>Some of our works!</h2>
+          <div className='carousel-constructions-container'>
+            {carouselItems}
+          </div>
+        </div> : null}
+      </Aux>
+      
     )
   }
 }
