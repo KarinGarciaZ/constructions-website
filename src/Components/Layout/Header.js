@@ -69,7 +69,7 @@ class Header extends Component {
         <NavLink to='/all-constructions' activeClassName='nav-active' className='nav' >
           Our Constructions
         </NavLink>
-        <NavLink to='/' activeClassName='nav-active' className='nav' >
+        <NavLink to='/all-services' activeClassName='nav-active' className='nav' >
           Our Services
         </NavLink>
         <NavLink to='/about-us' activeClassName='nav-active' className='nav' >
