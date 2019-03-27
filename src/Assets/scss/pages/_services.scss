@@ -1,0 +1,46 @@
+.services-container {
+  grid-column: 1 / -1;
+  min-height: 66vh;
+  display: grid;
+  grid-template-columns: 1fr [center-starts] 
+    repeat( 10, 10.7rem ) [center-ends] 1fr;
+  grid-template-rows: min-content;
+
+  &__cards {
+    grid-column: center-starts / center-ends;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 32rem);
+    justify-content: center;
+    grid-gap: 5rem;    
+    padding: 5rem 0;
+
+    &--card {
+
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: all .2s ease;
+
+      &-img {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+      }
+
+      &-name {
+        font-size: 2rem;
+        text-transform: capitalize;
+        color: white;
+        width: 100%;
+        background-color: $color-secondary;
+        text-align: center;
+        margin-top: 1px;
+        padding: .3rem 0;
+      }
+
+      &:hover{
+        transform: scale(1.02);
+      }
+    }
+  }
+}
