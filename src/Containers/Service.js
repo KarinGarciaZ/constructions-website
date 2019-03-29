@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 
 import axios from '../axios-connection';
 import Header from '../Components/Layout/Header';
+import NoData from '../Components/NoData';
+
 
 class Service extends Component {
   state = {
-    service: {}
+    service: {},
+    notFound: false
   }
 
   componentDidMount() {
@@ -16,7 +19,10 @@ class Service extends Component {
     .then( resp => {
       this.setState({ service: resp.data })
     })
-    .catch( err => console.log(err.response))
+    .catch( error => {
+      console.log('error: ', error.response);
+      this.setState({ notFound: true })
+    })
   }
 
   render() {
@@ -33,6 +39,7 @@ class Service extends Component {
           <p className='service__container--name'>{service.name}</p>
           <p className='service__container--description'>{service.description}</p>
         </div> : null}
+        { this.state.notFound? <NoData item='this service.'/> : null }
       </div>
     )
   }

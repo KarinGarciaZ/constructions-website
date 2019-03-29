@@ -3,13 +3,15 @@ import React, { Component } from 'react';
 import Header from '../Components/Layout/Header';
 import axios from '../axios-connection';
 import ConstructionCard from '../Components/Cards/ConstructionCard';
+import NoData from '../Components/NoData';
 
 class Construction extends Component {
 
   state = {
     construction: { },
     urlImagePortrait: '',
-    relatedConstructions: []
+    relatedConstructions: [],
+    notFound: false
   }
 
   componentDidMount() {
@@ -49,7 +51,8 @@ class Construction extends Component {
       this.setState({ construction: construction.data, urlImagePortrait })
     })
     .catch( error => {      
-      console.log('error: ', error);
+      console.log('error: ', error.response);
+      this.setState({ notFound: true })
     })
   }
 
@@ -167,6 +170,7 @@ class Construction extends Component {
             <button className='btn' onClick={this.handleClick.bind( this )}>back to constructions</button>
           </div>
         </div> : null}
+        { this.state.notFound? <NoData item='this construction.'/> : null }
       </div>
     )
   }

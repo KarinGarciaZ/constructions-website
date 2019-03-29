@@ -160,7 +160,7 @@ class Constructions extends Component {
         </div>
         break;
       case 'none':
-        loadContent = <NoData item='Constructions'/>
+        loadContent = <NoData item='Constructions with these characteristics.'/>
         break;
     
       default:

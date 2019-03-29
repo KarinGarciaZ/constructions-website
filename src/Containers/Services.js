@@ -47,10 +47,10 @@ class Services extends Component {
         loadContent = <Loading />
         break;
       case 'services':
-        loadContent = arrayCards;
+        loadContent =  arrayCards;
         break;
       case 'none':
-        loadContent = <NoData item='Services' />
+        loadContent = <NoData item='Services with these characteristics.' />
         break;
     
       default:
@@ -62,9 +62,9 @@ class Services extends Component {
     return (
       <div className='services-container'>
         <Header { ...props }/>
-        <div className='about-us__title'>
+        { content === 'services'? <div className='about-us__title'>
           <span className='about-us__title--text'>Our Services</span>
-        </div>
+        </div> : null}
         <div className='services-container__cards'>
           {loadContent}
         </div>
