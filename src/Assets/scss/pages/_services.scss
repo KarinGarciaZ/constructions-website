@@ -1,9 +1,9 @@
 .services-container {
   grid-column: 1 / -1;
-  min-height: 66vh;
+  min-height: 80vh;
   display: grid;
   grid-template-columns: 1fr [center-starts] 
-    repeat( 10, 10.7rem ) [center-ends] 1fr;
+    repeat( 10, minmax(min-content, 10.7rem)) [center-ends] 1fr;
   grid-template-rows: min-content;
 
   &__cards {
@@ -11,6 +11,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, 32rem);
     justify-content: center;
+    align-content: start;
     grid-gap: 5rem;    
     padding: 5rem 0;
 
@@ -39,8 +40,48 @@
       }
 
       &:hover{
-        transform: scale(1.02);
+        transform: scale(1.03);
       }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-600) {
+  .services-container {      
+    &__cards {
+      grid-template-columns: repeat(auto-fit, 27rem);
+      grid-gap: 5rem;    
+
+      &--card {  
+  
+        &-img {
+          height: 18rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-500) {
+  .services-container {      
+    &__cards {
+      grid-template-columns: 80vw;
+      grid-column-gap: 5rem;    
+
+      &--card {  
+  
+        &-img {
+          height: 26rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-400) {
+  .services-container {      
+    &__cards { 
+      grid-template-columns: 90vw;
     }
   }
 }

@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
 import Header from '../Components/Layout/Header';
 import axios from '../axios-connection';
 import ConstructionCard from '../Components/Cards/ConstructionCard';
+import NoData from '../Components/NoData';
 
 class Construction extends Component {
 
   state = {
     construction: { },
     urlImagePortrait: '',
-    relatedConstructions: []
+    relatedConstructions: [],
+    notFound: false
   }
 
   componentDidMount() {
@@ -49,7 +52,8 @@ class Construction extends Component {
       this.setState({ construction: construction.data, urlImagePortrait })
     })
     .catch( error => {      
-      console.log('error: ', error);
+      console.log('error: ', error.response);
+      this.setState({ notFound: true })
     })
   }
 
@@ -115,6 +119,16 @@ class Construction extends Component {
       }) 
     }
 
+
+    if ( construction.statusConstruction === 'In Progress' ) {
+      let startMoment = moment(construction.startDate).format('MM/DD/YYYY');
+      construction.statusConstruction = startMoment + ' - ' + construction.statusConstruction;
+    } else {
+      let startMoment = moment(construction.startDate).format('MM/DD/YYYY');
+      let finishMoment = moment(construction.finishDate).format('MM/DD/YYYY');
+      construction.statusConstruction = startMoment + ' - ' + finishMoment;
+    }
+
     let relatedConstructions = [ ...this.state.relatedConstructions ]
 
     let carouselItems = relatedConstructions.map( construction => {
@@ -145,7 +159,7 @@ class Construction extends Component {
               {construction.type.name}
             </div>
             <div className='construction__content--info-type'>
-              <p>Status</p>
+              <p>Project time</p>
               {construction.statusConstruction}
             </div>
             <div className='construction__content--info-location'>
@@ -167,6 +181,7 @@ class Construction extends Component {
             <button className='btn' onClick={this.handleClick.bind( this )}>back to constructions</button>
           </div>
         </div> : null}
+        { this.state.notFound? <NoData item='this construction.'/> : null }
       </div>
     )
   }

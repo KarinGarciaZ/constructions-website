@@ -4,7 +4,7 @@
   margin-bottom: 5rem;
 
   display: grid;  
-  grid-template-rows: repeat(2, min-content);
+  grid-template-rows: min-content;
   grid-template-columns: [full-starts] 1fr [center-starts]
     repeat(10, [col-starts] minmax(min-content, 12rem) [col-ends] )
     [center-ends] 1fr [full-ends];
