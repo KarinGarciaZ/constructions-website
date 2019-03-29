@@ -2,17 +2,21 @@ import React, { Component } from 'react';
 
 import Header from '../Components/Layout/Header';
 import axios from '../axios-connection';
+import Loading from '../Components/Loading';
+import NoData from '../Components/NoData';
 
 class Services extends Component {
 
   state = {
-    services: []
+    services: [],
+    load: 'loading'
   }
 
   componentDidMount() {
     axios.get( '/service' )
     .then( resp => {
-      this.setState({ services: resp.data })
+      let load = resp.data.length? 'services' : 'none';
+      this.setState({ services: resp.data, load })
     })
     .catch( err => console.log(err.response))
   }
@@ -36,6 +40,25 @@ class Services extends Component {
       )
     })
 
+    let content = this.state.load;
+    let loadContent = null;
+    switch (content) {
+      case 'loading':
+        loadContent = <Loading />
+        break;
+      case 'services':
+        loadContent = arrayCards;
+        break;
+      case 'none':
+        loadContent = <NoData item='Services' />
+        break;
+    
+      default:
+        loadContent = <Loading />
+        break;
+    }
+
+
     return (
       <div className='services-container'>
         <Header { ...props }/>
@@ -43,7 +66,7 @@ class Services extends Component {
           <span className='about-us__title--text'>Our Services</span>
         </div>
         <div className='services-container__cards'>
-          {arrayCards}
+          {loadContent}
         </div>
       </div>
     )

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import loading from '../Assets/Images/loading.png'
-import img404 from '../Assets/Images/404.jpg'
+import Loading from '../Components/Loading';
+import NoData from '../Components/NoData';
 import Header from '../Components/Layout/Header';
 import Sidebar from '../Components/Layout/Sidebar';
 import axios from '../axios-connection';
@@ -151,11 +151,7 @@ class Constructions extends Component {
     let loadContent = null;
     switch (content) {
       case 'loading':
-        loadContent = <div className='constructions__container'>
-          <div className='constructions__container--loading'>
-            <img src={loading} alt='loading-icon' className='loading-icon'/>
-          </div>
-        </div>
+        loadContent = <Loading />
         break;
       case 'constructions':
         loadContent = <div className='constructions__container'>
@@ -164,20 +160,11 @@ class Constructions extends Component {
         </div>
         break;
       case 'none':
-        loadContent = <div className='constructions__container'>
-          <div className='constructions__container--none'>
-            <img src={img404} alt='loading-icon' className='img404'/>
-            <p>We couldn't find a construction with these characteristics.</p>
-          </div>
-        </div>
+        loadContent = <NoData item='Constructions'/>
         break;
     
       default:
-        loadContent = <div className='constructions__container'>
-          <div className='constructions__container--loading'>
-            <img src={loading} alt='loading-icon' className='loading-icon'/>
-          </div>
-        </div>
+        loadContent = <Loading />
         break;
     }
 
