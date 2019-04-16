@@ -52,7 +52,7 @@
         text-decoration: none;
         font-size: 1.2rem;
         text-align: center;
-        max-width: 17rem;
+        max-width: 18rem;
         transition: all .1s;
         
         &:hover {
@@ -93,6 +93,7 @@
     padding-top: 4rem;
 
     &--text {
+      text-align: center;
       a {
         color: whitesmoke;
         font-size: 1.5rem;
