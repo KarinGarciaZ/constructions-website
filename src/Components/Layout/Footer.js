@@ -18,7 +18,7 @@ class Footer extends Component {
           <div className='footer__container--contact footer-navigate'>
             <p className='footer__container--contact-title'>Navigate</p>
             <Link to='/all-constructions' className='footer__container--contact-link'>our constructions</Link>
-            <Link to='/' className='footer__container--contact-link'>our services</Link>
+            <Link to='/all-services' className='footer__container--contact-link'>our services</Link>
             <Link to='/about-us' className='footer__container--contact-link'>About us</Link>
           </div>
 
