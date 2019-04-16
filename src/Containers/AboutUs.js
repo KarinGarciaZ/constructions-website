@@ -12,6 +12,11 @@ import BusinessImage from '../Assets/Images/businessman.jpg';
 import MB from '../Assets/Images/mb.jpg';
 
 class AboutUs extends Component {
+
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   render() {    
     
     let props = { ...this.props };

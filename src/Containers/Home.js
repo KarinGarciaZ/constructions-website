@@ -10,6 +10,10 @@ import CarouselServices from '../Components/Sections/CarouselServices';
 
 class Home extends Component { 
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   render() {
     
     let props = { ...this.props };

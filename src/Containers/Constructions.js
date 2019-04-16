@@ -48,6 +48,7 @@ class Constructions extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     axios.get('/construction')
     .then( data => {
       axios.get('/type')
