@@ -141,7 +141,12 @@
     .nav {
       grid-column: 1 / -1;
       display: initial;
-      text-align: center;
+      text-align: center;      
     }    
+  }
+
+  .line-top {
+    padding-top: 1rem;
+    border-top: 1px solid #FFFFFF44;
   }
 }
