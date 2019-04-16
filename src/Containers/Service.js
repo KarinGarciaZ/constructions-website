@@ -25,11 +25,27 @@ class Service extends Component {
     })
   }
 
+  handleClick = () => {
+    this.props.history.push('/all-services');
+  }
+
   render() {
 
     let service = { ...this.state.service };    
     let props = { ...this.props };    
     let imageUrl = 'http://localhost:3001/' + service.image;
+
+    let paragraphs = null;
+
+    if( service.description ) {
+      service.description = service.description.split('\n');
+
+      paragraphs = service.description.map( (description, index) => {
+        return(
+          <p className='service__container--description' key={index}>{description}</p>
+        )
+      })
+    }    
 
     return (
       <div className='service'>
@@ -37,9 +53,12 @@ class Service extends Component {
         { service.image? <div className='service__container'>
           <img src={imageUrl} className='service__container--img' alt='img-service'/>
           <p className='service__container--name'>{service.name}</p>
-          <p className='service__container--description'>{service.description}</p>
+          <div className='service__container--paragraphs'>
+            {paragraphs}
+          </div>
+          <button className='btn' onClick={this.handleClick.bind( this )}>back to services</button>
         </div> : null}
-        { this.state.notFound? <NoData item='this service.'/> : null }
+        { this.state.notFound? <NoData item='this service.'/> : null }        
       </div>
     )
   }

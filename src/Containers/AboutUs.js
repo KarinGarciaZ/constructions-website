@@ -8,7 +8,7 @@ import TeamMemberCard from '../Components/Cards/TeamMemberCard';
 import TeamImage from '../Assets/Images/team.jpg';
 import TeamImage2 from '../Assets/Images/team2.jpg';
 import TeamImage3 from '../Assets/Images/team3.jpg';
-import BusinessImage from '../Assets/Images/businessman.png';
+import BusinessImage from '../Assets/Images/businessman.jpg';
 import MB from '../Assets/Images/mb.jpg';
 
 class AboutUs extends Component {

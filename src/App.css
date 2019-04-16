@@ -1249,9 +1249,15 @@ body {
       color: #101d2c;
       text-align: center; }
     .service__container--description {
-      font-size: 1.5rem;
       text-align: justify;
-      padding: 0 1rem; }
+      text-indent: 4rem;
+      margin-bottom: 1rem; }
+    .service__container--paragraphs {
+      padding: 0 2rem;
+      text-align: justify;
+      font-size: 1.8rem; }
+    .service__container .btn {
+      justify-self: center; }
 
 .about-us {
   min-height: 70vh;
