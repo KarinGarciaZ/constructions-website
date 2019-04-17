@@ -12,7 +12,8 @@ html {
 body {
   color: #404040;
   font-weight: 300;
-  line-height: 1.6; }
+  line-height: 1.6;
+  font-family: "Josefin Sans", sans-serif; }
 
 .container {
   display: grid;
@@ -506,7 +507,10 @@ body {
     .active .nav {
       grid-column: 1 / -1;
       display: initial;
-      text-align: center; } }
+      text-align: center; }
+  .line-top {
+    padding-top: 1rem;
+    border-top: 1px solid #FFFFFF44; } }
 
 .content-layout {
   grid-column: 1 / -1;
@@ -600,7 +604,7 @@ body {
         text-decoration: none;
         font-size: 1.2rem;
         text-align: center;
-        max-width: 17rem;
+        max-width: 18rem;
         transition: all .1s; }
         .footer__container--contact-link:hover {
           transform: scale(1.07) translateY(-3px); }
@@ -622,11 +626,13 @@ body {
     grid-column: center-start / center-end;
     justify-self: center;
     padding-top: 4rem; }
-    .footer__copyright--text a {
-      color: whitesmoke;
-      font-size: 1.5rem;
-      font-weight: 400;
-      margin-left: 0; }
+    .footer__copyright--text {
+      text-align: center; }
+      .footer__copyright--text a {
+        color: whitesmoke;
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-left: 0; }
     .footer__copyright .social-icon {
       width: 2.8rem;
       transition: all .1s; }
@@ -671,8 +677,7 @@ body {
   grid-gap: 7rem; }
   .services__title {
     grid-column: 1 / -1;
-    justify-self: center;
-    margin-bottom: 3rem; }
+    justify-self: center; }
   @media only screen and (max-width: 75em) {
     .services {
       grid-gap: 3rem;
@@ -1089,11 +1094,15 @@ body {
           font-size: 1.4rem;
           margin-bottom: -1rem; }
       .construction__content--info-description {
-        font-weight: 400;
         font-size: 1.2rem;
         text-align: justify; }
         .construction__content--info-description p {
           font-size: 1.4rem; }
+        .construction__content--info-description-p {
+          text-align: justify;
+          text-indent: 4rem;
+          margin: 1rem 2rem 0 2rem;
+          font-size: 1.3rem !important; }
     .construction__content--constructions {
       grid-column: 1 / -1;
       display: grid;

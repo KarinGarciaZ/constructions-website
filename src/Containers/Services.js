@@ -13,6 +13,7 @@ class Services extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     axios.get( '/service' )
     .then( resp => {
       let load = resp.data.length? 'services' : 'none';

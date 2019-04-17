@@ -12,7 +12,7 @@ class Service extends Component {
   }
 
   componentDidMount() {
-
+    window.scrollTo(0, 0)
     let id = this.props.match.params.id
 
     axios.get( '/service/' + id )

@@ -16,6 +16,7 @@ class Construction extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     const id = this.props.match.params.id;
     this.loadConstruction( id )
   }
@@ -119,6 +120,18 @@ class Construction extends Component {
       }) 
     }
 
+    let paragraphs = null;
+
+    if( construction.description ) {
+      construction.description = construction.description.split('\n');
+
+      paragraphs = construction.description.map( (description, index) => {
+        return(
+          <p className='construction__content--info-description-p' key={index}>{description}</p>
+        )
+      })
+    }  
+
 
     if ( construction.statusConstruction === 'In Progress' ) {
       let startMoment = moment(construction.startDate).format('MM/DD/YYYY');
@@ -168,7 +181,7 @@ class Construction extends Component {
             </div>
             <div className='construction__content--info-description'>
               <p>Description</p>
-              {construction.description}
+              {paragraphs}
             </div>
           </div>
           <div className='construction__content--border'></div>

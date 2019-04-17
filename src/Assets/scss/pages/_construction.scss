@@ -111,12 +111,18 @@
       }
 
       &-description {
-        font-weight: 400;
         font-size: 1.2rem;
         text-align: justify;
 
-        p {
+        p {          
           font-size: 1.4rem;
+        }
+
+        &-p {
+          text-align: justify;
+          text-indent: 4rem;
+          margin: 1rem 2rem 0 2rem;
+          font-size: 1.3rem !important;
         }
       }
     }

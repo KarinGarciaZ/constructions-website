@@ -66,7 +66,7 @@ class Header extends Component {
         <div className='mobile-menu' onClick={this.onHandleMenu}>
           <div className='mobile-menu-content'></div>
         </div>
-        <NavLink to='/all-constructions' activeClassName='nav-active' className='nav' >
+        <NavLink to='/all-constructions' activeClassName='nav-active' className='nav line-top' >
           Our Constructions
         </NavLink>
         <NavLink to='/all-services' activeClassName='nav-active' className='nav' >
