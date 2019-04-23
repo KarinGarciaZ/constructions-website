@@ -25,7 +25,7 @@ class Layout extends Component {
     return (
       <div className='container'>
         {this.state.gotToken? <ContentLayout /> : null}
-        <Footer />
+        {this.state.gotToken? <Footer /> : null}        
       </div>
     )
   }
