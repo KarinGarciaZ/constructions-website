@@ -33,7 +33,7 @@ class Service extends Component {
 
     let service = { ...this.state.service };    
     let props = { ...this.props };    
-    let imageUrl = 'http://localhost:3001/' + service.image;
+    let imageUrl = 'https://murmuring-eyrie-84778.herokuapp.com/' + service.image;
 
     let paragraphs = null;
 
