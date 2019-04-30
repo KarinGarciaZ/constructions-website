@@ -32,7 +32,7 @@ class Services extends Component {
     let props = { ...this.props };
 
     let arrayCards = services.map( service => {
-      let imageUrl = 'http://localhost:3001/' + service.image;
+      let imageUrl = 'https://murmuring-eyrie-84778.herokuapp.com/' + service.image;
       return (
         <div className='services-container__cards--card' key={service.id} onClick={this.onCardClicked.bind( this, service.id )} >
           <img src={imageUrl} alt='img-service' className='services-container__cards--card-img' />

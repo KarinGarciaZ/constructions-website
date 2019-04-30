@@ -31,7 +31,7 @@ class Construction extends Component {
   loadConstruction = ( id ) => {    
     axios.get('/construction/' + id)
     .then( construction => {
-      let urlImagePortrait = 'http://localhost:3001/' + construction.data.images.filter( image => image.mainImage === 1 )[0].url;
+      let urlImagePortrait = 'https://murmuring-eyrie-84778.herokuapp.com/' + construction.data.images.filter( image => image.mainImage === 1 )[0].url;
 
       if ( construction.data.images.length > 1 ) {
         if ( !construction.data.images[0].mainImage ) {
@@ -104,7 +104,7 @@ class Construction extends Component {
     let mainImage = ''
     let images = []
     if ( construction.images ){
-      mainImage = 'http://localhost:3001/' + construction.images.filter( image => image.mainImage === 1 )[0].url;
+      mainImage = 'https://murmuring-eyrie-84778.herokuapp.com/' + construction.images.filter( image => image.mainImage === 1 )[0].url;
 
       images = construction.images.map( image => {
         let classes = ['construction__content--images-img']
@@ -114,7 +114,7 @@ class Construction extends Component {
         return <img 
           className={classes.join(' ')}
           alt='Construction img' 
-          src={'http://localhost:3001/' + image.url}
+          src={'https://murmuring-eyrie-84778.herokuapp.com/' + image.url}
           onMouseEnter={this.changeMainImage.bind(this, image.id)}
           key={image.id}></img>
       }) 
