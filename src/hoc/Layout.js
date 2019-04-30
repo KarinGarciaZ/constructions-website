@@ -13,7 +13,6 @@ class Layout extends Component {
   componentDidMount() {        
     axios.get('auth/website-token')
     .then( resp => {
-      localStorage.setItem('websiteToken', resp.data.token);
       this.setState({gotToken: true})
     })
     .catch( error => {
