@@ -1094,7 +1094,7 @@ body {
           font-size: 1.4rem;
           margin-bottom: -1rem; }
       .construction__content--info-description {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         text-align: justify; }
         .construction__content--info-description p {
           font-size: 1.4rem; }
@@ -1102,7 +1102,7 @@ body {
           text-align: justify;
           text-indent: 4rem;
           margin: 1rem 2rem 0 2rem;
-          font-size: 1.3rem !important; }
+          font-size: 1.5rem !important; }
     .construction__content--constructions {
       grid-column: 1 / -1;
       display: grid;
