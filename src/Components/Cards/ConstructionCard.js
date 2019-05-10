@@ -6,7 +6,6 @@ const ConstructionCard = ( props ) => {
   let construction = props.construction;
   
   let imageUrl = construction.images.filter( image => image.mainImage? true : false )[0].url;
-  imageUrl = 'https://murmuring-eyrie-84778.herokuapp.com/' + imageUrl;
 
   let classes = ['construction-card'];
   if ( props.cardSize )
