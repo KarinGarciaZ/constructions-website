@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faInfoCircle, faHotel, faSearchDollar } from "@fortawesome/free-solid-svg-icons";
+import { faMapMarkerAlt, faInfoCircle, faHotel, faHandHoldingHeart } from "@fortawesome/free-solid-svg-icons";
 
 const ConstructionCard = ( props ) => {
   let construction = props.construction;
@@ -32,10 +32,10 @@ const ConstructionCard = ( props ) => {
       </div>          
 
       <div className='construction-card__info'>
-        <FontAwesomeIcon icon={faSearchDollar} className='construction-card__icon'/>
-        <p>Best choice</p>
+        <FontAwesomeIcon icon={faHandHoldingHeart} className='construction-card__icon'/>
+        <p>Cliente Satisfecho</p>
       </div>          
-      <button className='btn construction-card__btn' onClick={() => props.clicked( construction.id )}>See Construction</button>
+      <button className='btn construction-card__btn' onClick={() => props.clicked( construction.id )}>Ver Construcción</button>
     </div>
   )
 }
