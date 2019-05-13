@@ -27,7 +27,7 @@ class AboutUs extends Component {
         <div className='about-us__container'>
 
           <div className='about-us__title'>
-            <span className='about-us__title--text'>About us</span>
+            <span className='about-us__title--text'>Sobre Nosotros...</span>
           </div>
 
           <div className='about-us__objectives'>
@@ -37,38 +37,33 @@ class AboutUs extends Component {
               <img src={TeamImage3} alt='team-img' className='about-us__objectives--img-3'/>
             </div>
             <div className='about-us__objectives--team'>
-              <DescriptionCard title='Who are we?'>
-                Refinery29 is a trailblazing digital-media and entertainment company for young women with a 
-                global audience footprint of 550 million across all platforms.
-                Refinery29 is a trailblazing digital-media and entertainment company for young women with a 
-                global audience footprint of 550 million across all platforms.
-                We deliver style and substance to an audience that's highly engaged across a variety of devices and destinations.
+              <DescriptionCard title='¿Quiénes somos?'>
+                Somos una empresa 100% mexicana que lleva desarrollando proyectos por más de 25 años, respaldando a nuestros clientes
+                por nuestra gran experiencia y confiabilidad para ser la mejor opción en el mercado.
               </DescriptionCard>
             </div>
             <div className='about-us__objectives--mision'>
               <DescriptionCard title='mision'>
-                Refinery29 is a catalyst for women to feel, see, and claim their power.
+                Proporcionar servicios de construcción con la más alta calidad y mejores precios mejorando la expectativa del cliente.
               </DescriptionCard>
             </div>
             <div className='about-us__objectives--vision'>
               <DescriptionCard title='vision'>
-                We deliver optimistic and diverse storytelling, experiences, and points of view to our audience of smart, curious, passionate women.
+                Seguir siendo una empresa líder en el área expandiendonos a nivel nacional manteniendo la misma calidad para el bien de nuestros clientes.
               </DescriptionCard>
             </div>
           </div>          
 
           <div className='about-us__team-members'>
-            <TeamMemberCard rank='President' name='Oscar Garcia' image={BusinessImage}>
-              Refinery29 is a trailblazing digital-media and entertainment company for young women with a 
-              global audience footprint of 550 million across all platforms.
-              We deliver style and substance to an audience that's highly engaged across a variety of devices and destinations, 
-              from original video and features, to live experiences and social storytelling.
+            <TeamMemberCard rank='Presidente' name='Oscar Garcia' image={BusinessImage}>
+              Dirige la gestión diaria de los proyectos y supervisa la asignación y el desarrollo de los recursos laborales de nuestra empresa. 
+              Fue líder en otra importante empresa de formación de concreto en Guadalajara antes de comenzar la empresa con su padre y hermano.
             </TeamMemberCard>
 
             <TeamMemberCard rank='Managers' name='Marcos & Brandon' image={MB}>
-              Refinery29 is a trailblazing digital-media and entertainment company for young women with a 
-              global audience footprint of 550 million across all platforms.
-              We deliver style and substance to an audience that's highly engaged across a variety of devices and destinations, 
+              Mantienen las relaciones con los clientes y son responsables de estimar los proyectos tanto en tiempo y costo.
+              También proporcionan apoyo logístico y de gestión cotidianos a los distintos sitios de trabajo.
+              Cuentan con más de doce años de experiencia como estimadores y gerentes de proyectos.
             </TeamMemberCard>
           </div>          
           

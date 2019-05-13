@@ -156,7 +156,8 @@ body {
   background-color: #b9d6fa33;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 3rem; }
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 3rem; }
   .construction-card__image {
     grid-column: 1 / -1;
     width: 100%;
@@ -197,7 +198,8 @@ body {
     font-weight: 300; }
 
 .construction-card-small {
-  grid-gap: 2rem; }
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem; }
   .construction-card-small .construction-card__image {
     height: 18rem; }
   .construction-card-small .construction-card__title {
@@ -215,7 +217,8 @@ body {
 
 @media only screen and (max-width: 75em) {
   .construction-card {
-    grid-gap: 2rem; }
+    grid-column-gap: 1rem;
+    grid-row-gap: 2rem; }
     .construction-card__image {
       height: 20rem; }
     .construction-card__title {
@@ -476,19 +479,19 @@ body {
     .mobile-menu-content {
       transition: all .3s;
       height: 2px;
-      background-color: #8fc1ffa6; }
+      background-color: #a9d0ffa6; }
       .mobile-menu-content::before {
         content: '';
         transform: translateY(-6px);
         display: block;
         height: 2px;
-        background-color: #8fc1ffa6; }
+        background-color: #a9d0ffa6; }
       .mobile-menu-content::after {
         content: '';
         transform: translateY(4px);
         display: block;
         height: 2px;
-        background-color: #8fc1ffa6; }
+        background-color: #a9d0ffa6; }
   .transparent.active {
     background-color: #FFFFFF22; }
   .active {
@@ -501,7 +504,7 @@ body {
         transform: rotate(90deg);
         display: block;
         height: 2px;
-        background-color: #8fc1ffa6; }
+        background-color: #a9d0ffa6; }
       .active .mobile-menu-content::after {
         display: none; }
     .active .nav {
@@ -713,7 +716,7 @@ body {
 .contact-us {
   grid-column: 1 / -1;
   padding: 11rem 0;
-  background-color: #8fc1ffa6;
+  background-color: #a9d0ffa6;
   display: grid;
   grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; }
   .contact-us__img {
@@ -847,7 +850,7 @@ body {
 
 .about-company {
   grid-column: 1 / -1;
-  background-color: #8fc1ffa6;
+  background-color: #a9d0ffa6;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   min-height: 50rem; }
@@ -1286,7 +1289,7 @@ body {
     .about-us__title--text {
       font-size: 5rem;
       font-weight: 400;
-      color: #8fc1ffa6; }
+      color: #a9d0ffa6; }
   .about-us__objectives {
     padding: 8rem 0;
     grid-column: center-starts / center-ends;

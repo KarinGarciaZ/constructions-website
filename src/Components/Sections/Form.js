@@ -49,25 +49,25 @@ class Form extends Component {
         <div className='contact-us__img'>
           <form className='contact-us__img--form' onSubmit={ e => this.sendMail(e)}>
             <h2 className='form-title'>
-              Send us a message!
+              Mandanos un mensaje..
             </h2>
             <div className='form-group'>
-              <input type='text' className='input' placeholder='Your name' id='name' required value={this.state.form.name} onChange={ e => this.onChangeValue( e, 'name' )}/>
-              <label className='label' htmlFor='name'>Your name</label>
+              <input type='text' className='input' placeholder='Tu nombre' id='name' required value={this.state.form.name} onChange={ e => this.onChangeValue( e, 'name' )}/>
+              <label className='label' htmlFor='name'>Tu nombre</label>
             </div>
             <div className='form-group'>
-              <input type='email' className='input' placeholder='Your e-mail' id='email' required value={this.state.form.email} onChange={ e => this.onChangeValue( e, 'email' )}/>
+              <input type='email' className='input' placeholder='Tu e-mail' id='email' required value={this.state.form.email} onChange={ e => this.onChangeValue( e, 'email' )}/>
               <label className='label' htmlFor='email'>Email</label>
             </div>
             <div className='form-group'>
-              <input type='text' className='input' placeholder='Subject' id='subject' required value={this.state.form.subject} onChange={ e => this.onChangeValue( e, 'subject' )}/>
-              <label className='label' htmlFor='subject'>Subject</label>
+              <input type='text' className='input' placeholder='Asunto' id='subject' required value={this.state.form.subject} onChange={ e => this.onChangeValue( e, 'subject' )}/>
+              <label className='label' htmlFor='subject'>Asunto</label>
             </div>
             <div className='form-group'>
-              <textarea type='text' className='input' placeholder='Your Message' id='content' rows='6' required value={this.state.form.message} onChange={ e => this.onChangeValue( e, 'message' )}/>
-              <label className='label' htmlFor='content'>Your message</label>
+              <textarea type='text' className='input' placeholder='Tu mensaje' id='content' rows='6' required value={this.state.form.message} onChange={ e => this.onChangeValue( e, 'message' )}/>
+              <label className='label' htmlFor='content'>Tu mensaje</label>
             </div>
-            <button className='btn btn-form'>Send message</button>
+            <button className='btn btn-form'>Enviar</button>
           </form>
         </div>
       </section>
