@@ -14,7 +14,7 @@ class CarouselServices extends Component {
 
     return (
       <section className='services'>
-        <h2 className='services__title u-title-2'>¿Por qué nosotros?</h2>
+        <h2 className='services__title u-title-2'>¿Por qué Nosotros?</h2>
         <ServiceCard title='Mejor Servicio' icon={icon1}>
           Usamos herramientas y maquinaria de alta tecnología para ofrecer un rápido, seguro y mejor servicio a nuestros clientes.
         </ServiceCard>
