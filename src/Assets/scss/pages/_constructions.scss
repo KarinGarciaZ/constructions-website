@@ -12,11 +12,11 @@
     [center-ends] minmax(2rem, 1fr) [full-ends];
 
   &__container {
-    margin: 3rem 0 8rem 0;
+    margin: 8rem 0;
     grid-column: center-starts / center-ends;
     display: grid;
-    grid-gap: 4rem;
-    grid-template-columns: repeat( auto-fit, 25rem);
+    grid-gap: 7rem;
+    grid-template-columns: repeat( auto-fit, 27rem);
     justify-content: center;
 
     &--loading {
