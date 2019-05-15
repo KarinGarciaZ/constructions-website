@@ -22,7 +22,7 @@
       flex-direction: column;
       cursor: pointer;
       transition: all .2s ease;
-      box-shadow: 0 0.2rem 1.5rem 0.2rem rgba(150, 150, 150, 0.5);
+      box-shadow: 0 0.2rem 1.5rem 0.2rem rgba(150, 150, 150, 0.45);
 
       &-img {
         width: 100%;
@@ -68,11 +68,12 @@
 @media only screen and (max-width: $bp-500) {
   .services-container {      
     &__cards { 
+      grid-template-columns: repeat(auto-fit, 38rem);
 
       &--card {  
   
         &-img {
-          height: 16rem;
+          height: 25rem;
         }
       }
     }
