@@ -23,6 +23,7 @@ class Construction extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.match.params.id !== this.props.match.params.id) {
+      window.scrollTo(0, 0)
       const id = nextProps.match.params.id
       this.loadConstruction( id );
     }
@@ -194,7 +195,7 @@ class Construction extends Component {
             <button className='btn' onClick={this.handleClick.bind( this )}>Todas las construcciones</button>
           </div>
         </div> : null}
-        { this.state.notFound? <NoData item='this construction.'/> : null }
+        { this.state.notFound? <NoData item='esta construcción.'/> : null }
       </div>
     )
   }
