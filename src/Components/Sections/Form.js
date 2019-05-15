@@ -49,7 +49,7 @@ class Form extends Component {
         <div className='contact-us__img'>
           <form className='contact-us__img--form' onSubmit={ e => this.sendMail(e)}>
             <h2 className='form-title'>
-              Mandanos un mensaje..
+              Contáctanos
             </h2>
             <div className='form-group'>
               <input type='text' className='input' placeholder='Tu nombre' id='name' required value={this.state.form.name} onChange={ e => this.onChangeValue( e, 'name' )}/>

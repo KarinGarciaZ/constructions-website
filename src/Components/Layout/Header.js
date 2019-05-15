@@ -23,18 +23,18 @@ class Header extends Component {
   listenScrollEvent = e => {
     let classes = { ...this.state.extraClasses }
 
-    if ( ( (window.scrollY > 450) || (( window.scrollY > 250) && classes.active) ) && classes.transparent ) {
+    if ( ( (window.scrollY > 200) || (( window.scrollY > 50) && classes.active) ) && classes.transparent ) {
       classes.transparent = false;
       this.setState({extraClasses: classes})      
     }
 
     if ( classes.active ) {
-      if ( (window.scrollY < 250)  && !classes.transparent ) {
+      if ( (window.scrollY < 50)  && !classes.transparent ) {
         classes.transparent = true;
         this.setState({extraClasses: classes})
       }   
     } else {
-      if ( (window.scrollY < 450)  && !classes.transparent ) {
+      if ( (window.scrollY < 200)  && !classes.transparent ) {
         classes.transparent = true;
         this.setState({extraClasses: classes})
       }   
