@@ -6,6 +6,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 1.5rem;
   grid-row-gap: 3rem;
+  box-shadow: 0 0.2rem 1.5rem 0.2rem rgba(150, 150, 150, 0.2);
 
   &__image {
     grid-column: 1 / -1;
