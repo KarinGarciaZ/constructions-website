@@ -23,7 +23,7 @@ class Footer extends Component {
           </div>
 
           <div className='footer__container--contact'>
-            <p className='footer__container--contact-title'>Contactanos</p>          
+            <p className='footer__container--contact-title'>Contáctanos</p>          
             <div className='footer__container--contact-item'>            
               <FontAwesomeIcon icon={faMapMarkerAlt} className='contact-icon'/>
               <p>12654 Pacific St.</p>
