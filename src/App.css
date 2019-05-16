@@ -1104,7 +1104,7 @@ body {
           font-size: 1.4rem; }
         .construction__content--info-description-p {
           text-align: justify;
-          text-indent: 4rem;
+          text-indent: 2rem;
           margin: 1rem 2rem 0 2rem;
           font-size: 1.5rem !important; }
     .construction__content--constructions {
@@ -1261,7 +1261,7 @@ body {
       text-align: center; }
     .service__container--description {
       text-align: justify;
-      text-indent: 4rem;
+      text-indent: 2rem;
       margin-bottom: 1rem; }
     .service__container--paragraphs {
       padding: 0 2rem;
