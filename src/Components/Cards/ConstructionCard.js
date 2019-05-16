@@ -11,6 +11,8 @@ const ConstructionCard = ( props ) => {
   if ( props.cardSize )
     classes.push(props.cardSize);
 
+  construction.statusConstruction = construction.statusConstruction === 'In Progress' ? 'En Progreso' : 'Terminado';
+
   return (
     <div className={classes.join(' ')}>
       <img className='construction-card__image' src={imageUrl} alt='Construction img'></img>

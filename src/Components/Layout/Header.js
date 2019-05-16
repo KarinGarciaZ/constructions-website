@@ -83,7 +83,7 @@ class Header extends Component {
           Servicios
         </NavLink>
         <NavLink to='/about-us' activeClassName='nav-active' className='nav' >
-          Conocenos
+          Conócenos
         </NavLink>
       </div>
     )

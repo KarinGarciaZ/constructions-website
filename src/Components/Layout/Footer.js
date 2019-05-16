@@ -19,7 +19,7 @@ class Footer extends Component {
             <p className='footer__container--contact-title'>Navega</p>
             <Link to='/all-constructions' className='footer__container--contact-link'>Construcciones</Link>
             <Link to='/all-services' className='footer__container--contact-link'>Servicios</Link>
-            <Link to='/about-us' className='footer__container--contact-link'>Nosotros</Link>
+            <Link to='/about-us' className='footer__container--contact-link'>Conócenos</Link>
           </div>
 
           <div className='footer__container--contact'>
