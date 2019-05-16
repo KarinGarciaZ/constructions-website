@@ -136,7 +136,7 @@ class Construction extends Component {
 
     if ( construction.statusConstruction === 'In Progress' ) {
       let startMoment = moment(construction.startDate).format('MM/DD/YYYY');
-      construction.statusConstruction = startMoment + ' - ' + construction.statusConstruction;
+      construction.statusConstruction = startMoment + ' - En Progreso';
     } else {
       let startMoment = moment(construction.startDate).format('MM/DD/YYYY');
       let finishMoment = moment(construction.finishDate).format('MM/DD/YYYY');
