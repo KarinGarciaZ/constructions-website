@@ -56,7 +56,7 @@ class Footer extends Component {
         <div className='footer__copyright'>
           <div className='footer__container--contact-item'>            
             <FontAwesomeIcon icon={faLaptop} className='contact-icon'/>
-            <p className='footer__copyright--text'>&copy;Creado por <a href='https://github.com/KarinGarciaZ'>Oscar Jovanny Garcia Zepeda</a>. All rights reserved.</p>
+            <p className='footer__copyright--text'>&copy;Created by <a href='https://github.com/KarinGarciaZ'>Oscar Jovanny Garcia Zepeda</a>. All rights reserved.</p>
             <a href='https://github.com/KarinGarciaZ'><img src={github} alt='linkedin-icon' className='social-icon'/></a>
           </div>
         </div>
