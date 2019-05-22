@@ -67,7 +67,7 @@ class Header extends Component {
       <div className={classes.join(' ')}>
         <div className='company'>
           <img className='company__logo' src={logo} alt='img_logo' onClick={this.goToHome}/>
-          <span className='company__name' onClick={this.goToHome}>Nombre Empresa</span>
+          <span className='company__name' onClick={this.goToHome}>Company Name</span>
         </div>
         { this.props.optionsIcon? 
           <FontAwesomeIcon icon={faSlidersH} className='header__settings' onClick={this.props.iconClicked}/> 
@@ -77,13 +77,13 @@ class Header extends Component {
           <div className='mobile-menu-content'></div>
         </div>
         <NavLink to='/all-constructions' activeClassName='nav-active' className='nav line-top' >
-          Construcciones
+          Constructions
         </NavLink>
         <NavLink to='/all-services' activeClassName='nav-active' className='nav' >
-          Servicios
+          Our Services
         </NavLink>
         <NavLink to='/about-us' activeClassName='nav-active' className='nav' >
-          Conócenos
+          About Us
         </NavLink>
       </div>
     )

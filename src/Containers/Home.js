@@ -24,8 +24,8 @@ class Home extends Component {
 
         <div className='image-container'>
           <div className='midcontainer'>
-            <p className='text--image'>Tu mejor opción!</p>
-            <Link to='/all-constructions' className='btn--image'>Descubre nuestros proyectos</Link>
+            <p className='text--image'>Your best option!</p>
+            <Link to='/all-constructions' className='btn--image'>Discover Our Projects</Link>
           </div>          
         </div>
 
