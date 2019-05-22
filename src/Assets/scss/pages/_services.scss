@@ -12,7 +12,8 @@
     grid-template-columns: repeat(auto-fit, 32rem);
     justify-content: center;
     align-content: start;
-    grid-gap: 5rem;    
+    grid-row-gap: 5rem;
+    grid-column-gap: 5rem;    
     padding: 5rem 0;
 
     &--card {
@@ -21,6 +22,7 @@
       flex-direction: column;
       cursor: pointer;
       transition: all .2s ease;
+      box-shadow: 0 0.2rem 1.5rem 0.2rem rgba(150, 150, 150, 0.45);
 
       &-img {
         width: 100%;
@@ -50,7 +52,8 @@
   .services-container {      
     &__cards {
       grid-template-columns: repeat(auto-fit, 27rem);
-      grid-gap: 5rem;    
+      grid-row-gap: 5rem;
+      grid-column-gap: 4rem;
 
       &--card {  
   
@@ -64,24 +67,15 @@
 
 @media only screen and (max-width: $bp-500) {
   .services-container {      
-    &__cards {
-      grid-template-columns: 80vw;
-      grid-column-gap: 5rem;    
+    &__cards { 
+      grid-template-columns: repeat(auto-fit, 38rem);
 
       &--card {  
   
         &-img {
-          height: 26rem;
+          height: 25rem;
         }
       }
-    }
-  }
-}
-
-@media only screen and (max-width: $bp-400) {
-  .services-container {      
-    &__cards { 
-      grid-template-columns: 90vw;
     }
   }
 }

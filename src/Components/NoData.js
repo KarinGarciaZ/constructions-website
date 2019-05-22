@@ -6,7 +6,7 @@ const NoData = (props) => {
   return (
     <div className='no-data'>
       <img src={img404} alt='loading-icon' className='img404'/>
-      <p>We couldn't find {props.item}</p>
+      <p>No pudimos encontrar {props.item}</p>
     </div>
   )
 }

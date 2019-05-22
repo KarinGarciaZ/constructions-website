@@ -56,9 +56,9 @@ class Service extends Component {
           <div className='service__container--paragraphs'>
             {paragraphs}
           </div>
-          <button className='btn' onClick={this.handleClick.bind( this )}>back to services</button>
+          <button className='btn' onClick={this.handleClick.bind( this )}>Todos los servicios</button>
         </div> : null}
-        { this.state.notFound? <NoData item='this service.'/> : null }        
+        { this.state.notFound? <NoData item='este servicio.'/> : null }        
       </div>
     )
   }

@@ -23,6 +23,7 @@ class Construction extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.match.params.id !== this.props.match.params.id) {
+      window.scrollTo(0, 0)
       const id = nextProps.match.params.id
       this.loadConstruction( id );
     }
@@ -135,7 +136,7 @@ class Construction extends Component {
 
     if ( construction.statusConstruction === 'In Progress' ) {
       let startMoment = moment(construction.startDate).format('MM/DD/YYYY');
-      construction.statusConstruction = startMoment + ' - ' + construction.statusConstruction;
+      construction.statusConstruction = startMoment + ' - En Progreso';
     } else {
       let startMoment = moment(construction.startDate).format('MM/DD/YYYY');
       let finishMoment = moment(construction.finishDate).format('MM/DD/YYYY');
@@ -168,33 +169,33 @@ class Construction extends Component {
           <div className='construction__content--info'>
             <h3 className='construction__content--info-title'>{construction.title}</h3>
             <div className='construction__content--info-type'>
-              <p>Type</p>
+              <p>Tipo</p>
               {construction.type.name}
             </div>
             <div className='construction__content--info-type'>
-              <p>Project time</p>
+              <p>Periodo de desarrollo</p>
               {construction.statusConstruction}
             </div>
             <div className='construction__content--info-location'>
-              <p>Location</p>
+              <p>Ubicación</p>
               {construction.address}, {construction.city}, {construction.state}.
             </div>
             <div className='construction__content--info-description'>
-              <p>Description</p>
+              <p>Descripción</p>
               {paragraphs}
             </div>
           </div>
           <div className='construction__content--border'></div>
           { this.state.relatedConstructions.length? <div className='construction__content--constructions'>
-            <h4>Some related constructions</h4>
+            <h4>Construcciones relacionadas</h4>
             {carouselItems}
           </div> : null}
           { this.state.relatedConstructions.length? <div className='construction__content--border'></div> : null}
           <div className='construction__content--button'>
-            <button className='btn' onClick={this.handleClick.bind( this )}>back to constructions</button>
+            <button className='btn' onClick={this.handleClick.bind( this )}>Todas las construcciones</button>
           </div>
         </div> : null}
-        { this.state.notFound? <NoData item='this construction.'/> : null }
+        { this.state.notFound? <NoData item='esta construcción.'/> : null }
       </div>
     )
   }

@@ -23,13 +23,23 @@ class Header extends Component {
   listenScrollEvent = e => {
     let classes = { ...this.state.extraClasses }
 
-    if ((window.scrollY > 450) || ((window.scrollY <= 450 && window.scrollY > 250) && classes.active))
+    if ( ( (window.scrollY > 200) || (( window.scrollY > 50) && classes.active) ) && classes.transparent ) {
       classes.transparent = false;
-    else
-      classes.transparent = true;
-    
+      this.setState({extraClasses: classes})      
+    }
 
-    this.setState({extraClasses: classes})
+    if ( classes.active ) {
+      if ( (window.scrollY < 50)  && !classes.transparent ) {
+        classes.transparent = true;
+        this.setState({extraClasses: classes})
+      }   
+    } else {
+      if ( (window.scrollY < 200)  && !classes.transparent ) {
+        classes.transparent = true;
+        this.setState({extraClasses: classes})
+      }   
+    }  
+
   }
 
   componentDidMount() {
@@ -57,7 +67,7 @@ class Header extends Component {
       <div className={classes.join(' ')}>
         <div className='company'>
           <img className='company__logo' src={logo} alt='img_logo' onClick={this.goToHome}/>
-          <span className='company__name' onClick={this.goToHome}>company name</span>
+          <span className='company__name' onClick={this.goToHome}>Nombre Empresa</span>
         </div>
         { this.props.optionsIcon? 
           <FontAwesomeIcon icon={faSlidersH} className='header__settings' onClick={this.props.iconClicked}/> 
@@ -67,13 +77,13 @@ class Header extends Component {
           <div className='mobile-menu-content'></div>
         </div>
         <NavLink to='/all-constructions' activeClassName='nav-active' className='nav line-top' >
-          Our Constructions
+          Construcciones
         </NavLink>
         <NavLink to='/all-services' activeClassName='nav-active' className='nav' >
-          Our Services
+          Servicios
         </NavLink>
         <NavLink to='/about-us' activeClassName='nav-active' className='nav' >
-          About Us
+          Conócenos
         </NavLink>
       </div>
     )
