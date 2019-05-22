@@ -27,7 +27,7 @@ class AboutUs extends Component {
         <div className='about-us__container'>
 
           <div className='about-us__title'>
-            <span className='about-us__title--text'>Sobre Nosotros...</span>
+            <span className='about-us__title--text'>Us...</span>
           </div>
 
           <div className='about-us__objectives'>
@@ -37,33 +37,29 @@ class AboutUs extends Component {
               <img src={TeamImage3} alt='team-img' className='about-us__objectives--img-3'/>
             </div>
             <div className='about-us__objectives--team'>
-              <DescriptionCard title='¿Quiénes somos?'>
-                Somos una empresa 100% mexicana que lleva desarrollando proyectos por más de 25 años, respaldando a nuestros clientes
-                por nuestra gran experiencia y confiabilidad para ser la mejor opción en el mercado.
+              <DescriptionCard title='ABOUT US?'>
+                We are a 100% American company that has been developing projects for more than 25 years, supporting our clients for our great experience and reliability to be the best option in the market.
               </DescriptionCard>
             </div>
             <div className='about-us__objectives--mision'>
               <DescriptionCard title='mision'>
-                Proporcionar servicios de construcción con la más alta calidad y mejores precios mejorando la expectativa del cliente.
+                Provide construction services with the highest quality and best prices, improving the customer's expectations.
               </DescriptionCard>
             </div>
             <div className='about-us__objectives--vision'>
-              <DescriptionCard title='vision'>
-                Seguir siendo una empresa líder en el área expandiendonos a nivel nacional manteniendo la misma calidad para el bien de nuestros clientes.
+              <DescriptionCard title='vision'>                
+                To continue to be a leading company in the area, expanding nationally maintaining the same quality for the good of our customers.
               </DescriptionCard>
             </div>
           </div>          
 
           <div className='about-us__team-members'>
-            <TeamMemberCard rank='Presidente' name='Oscar Garcia' image={BusinessImage}>
-              Dirige la gestión diaria de los proyectos y supervisa la asignación y el desarrollo de los recursos laborales de nuestra empresa. 
-              Fue líder en otra importante empresa de formación de concreto en Guadalajara antes de comenzar la empresa con su padre y hermano.
+            <TeamMemberCard rank='President' name='Oscar Garcia' image={BusinessImage}>
+              Directs the daily management of the projects and supervises the allocation and development of the labor resources of our company. He was a leader in another important concrete training company in Guadalajara before starting the company with his father and brother.
             </TeamMemberCard>
 
             <TeamMemberCard rank='Managers' name='Marcos & Brandon' image={MB}>
-              Mantienen las relaciones con los clientes y son responsables de estimar los proyectos tanto en tiempo y costo.
-              También proporcionan apoyo logístico y de gestión cotidianos a los distintos sitios de trabajo.
-              Cuentan con más de doce años de experiencia como estimadores y gerentes de proyectos.
+              They maintain relationships with customers and are responsible for estimating projects both in time and cost. They also provide daily logistical and management support to the different work sites. They have more than twelve years of experience as estimators and project managers.
             </TeamMemberCard>
           </div>          
           

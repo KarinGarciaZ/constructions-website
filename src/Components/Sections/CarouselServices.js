@@ -14,18 +14,18 @@ class CarouselServices extends Component {
 
     return (
       <section className='services'>
-        <h2 className='services__title u-title-2'>¿Why Us?</h2>
-        <ServiceCard title='Mejor Servicio' icon={icon1}>
-          Usamos herramientas y maquinaria de alta tecnología para ofrecer un rápido, seguro y mejor servicio a nuestros clientes.
+        <h2 className='services__title u-title-2'>Why Us?</h2>
+        <ServiceCard title='Best Service' icon={icon1}>          
+          We use high technology tools and machinery to offer a fast, safe and better service to our customers. 
         </ServiceCard>
-        <ServiceCard title='Profesionalidad' icon={icon2}>
-          Ofrecemos servicios de alta calidad con personal 100% profesional en cada uno de nuestros proyectos.
+        <ServiceCard title='Professionalism' icon={icon2}>
+          We offer high quality services with 100% professional staff in each of our projects.
         </ServiceCard>
-        <ServiceCard title='Accesibilidad' icon={icon3}>
-          Manejamos los mejores precios del mercado en el país, dejando a nuestros clientes satisfechos con el buen resultado otorgado.
+        <ServiceCard title='Accessibility' icon={icon3}>          
+          We handle the best market prices in the country, leaving our customers satisfied with the good result.    
         </ServiceCard>
-        <ServiceCard title='Seguridad' icon={icon4}>
-          Servicios 100% seguros, somos una empresa transparente con contratos seguros.
+        <ServiceCard title='Security' icon={icon4}>          
+          100% secure services, we are a transparent company with secure contracts.
         </ServiceCard>
       </section>
     )

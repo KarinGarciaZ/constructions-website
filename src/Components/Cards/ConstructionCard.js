@@ -11,8 +11,6 @@ const ConstructionCard = ( props ) => {
   if ( props.cardSize )
     classes.push(props.cardSize);
 
-  construction.statusConstruction = construction.statusConstruction === 'In Progress' ? 'En Progreso' : 'Terminado';
-
   return (
     <div className={classes.join(' ')}>
       <img className='construction-card__image' src={imageUrl} alt='Construction img'></img>
@@ -35,9 +33,9 @@ const ConstructionCard = ( props ) => {
 
       <div className='construction-card__info'>
         <FontAwesomeIcon icon={faHandHoldingHeart} className='construction-card__icon'/>
-        <p>Cliente Satisfecho</p>
+        <p>Happy client</p>
       </div>          
-      <button className='btn construction-card__btn' onClick={() => props.clicked( construction.id )}>Ver Construcción</button>
+      <button className='btn construction-card__btn' onClick={() => props.clicked( construction.id )}>See Construction</button>
     </div>
   )
 }

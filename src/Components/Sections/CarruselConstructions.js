@@ -33,7 +33,7 @@ class CarruselConstructions extends Component {
     return (
       <Aux>
         { constructions.length? <div className='carousel'>
-          <h2 className='carousel__title u-title-2 u-margin-bottom-8'>¡Algunos de nuestros trabajos!</h2>
+          <h2 className='carousel__title u-title-2 u-margin-bottom-8'>Some of our projects!</h2>
           <div className='carousel-constructions-container'>
             {carouselItems}
           </div>

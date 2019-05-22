@@ -16,15 +16,14 @@ class AboutCompany extends Component {
           <img className='about-company__pictures--small' alt='big-img' src={architectsImage}/>
         </div>
         <div className='about-company__info'>
-          <h2 className='u-title-2'>Sobre Nosostros...</h2>
+          <h2 className='u-title-2'>About Us...</h2>
           <p className='u-text-16'>
-            Nos mantenemos como lideres de la industria siendo la mejor opción por nuestro excelente
-            desempeño. Ofreciendo servicios de desarrollo por más de 25 años.
+            We remain industry leaders being the best choice for our excellent performance. Offering development services for more than 25 years.
           </p>
           <p className='about-company__info--message'>
-            "Déjanos ser tu mejor decisión."
+            "Let us be your best decision."
           </p>
-          <button className='btn about-company__info--btn' onClick={this.handleClick}>Conoce más sobre nosotros</button>
+          <button className='btn about-company__info--btn' onClick={this.handleClick}>Know more about us</button>
         </div>
       </div>
     )

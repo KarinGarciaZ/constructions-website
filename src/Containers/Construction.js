@@ -169,33 +169,33 @@ class Construction extends Component {
           <div className='construction__content--info'>
             <h3 className='construction__content--info-title'>{construction.title}</h3>
             <div className='construction__content--info-type'>
-              <p>Tipo</p>
+              <p>Type of Construction</p>
               {construction.type.name}
             </div>
             <div className='construction__content--info-type'>
-              <p>Periodo de desarrollo</p>
+              <p>Development period</p>
               {construction.statusConstruction}
             </div>
             <div className='construction__content--info-location'>
-              <p>Ubicación</p>
+              <p>Location</p>
               {construction.address}, {construction.city}, {construction.state}.
             </div>
             <div className='construction__content--info-description'>
-              <p>Descripción</p>
+              <p>Description</p>
               {paragraphs}
             </div>
           </div>
           <div className='construction__content--border'></div>
           { this.state.relatedConstructions.length? <div className='construction__content--constructions'>
-            <h4>Construcciones relacionadas</h4>
+            <h4>Related constructions</h4>
             {carouselItems}
           </div> : null}
           { this.state.relatedConstructions.length? <div className='construction__content--border'></div> : null}
           <div className='construction__content--button'>
-            <button className='btn' onClick={this.handleClick.bind( this )}>Todas las construcciones</button>
+            <button className='btn' onClick={this.handleClick.bind( this )}>All constructions</button>
           </div>
         </div> : null}
-        { this.state.notFound? <NoData item='esta construcción.'/> : null }
+        { this.state.notFound? <NoData item='this construction.'/> : null }
       </div>
     )
   }

@@ -16,14 +16,14 @@ class Footer extends Component {
         <div className='footer__container'>
 
           <div className='footer__container--contact footer-navigate'>
-            <p className='footer__container--contact-title'>Navega</p>
-            <Link to='/all-constructions' className='footer__container--contact-link'>Construcciones</Link>
-            <Link to='/all-services' className='footer__container--contact-link'>Servicios</Link>
-            <Link to='/about-us' className='footer__container--contact-link'>Conócenos</Link>
+            <p className='footer__container--contact-title'>Navigate</p>
+            <Link to='/all-constructions' className='footer__container--contact-link'>Constructions</Link>
+            <Link to='/all-services' className='footer__container--contact-link'>Services</Link>
+            <Link to='/about-us' className='footer__container--contact-link'>About us</Link>
           </div>
 
           <div className='footer__container--contact'>
-            <p className='footer__container--contact-title'>Contáctanos</p>          
+            <p className='footer__container--contact-title'>Contact us</p>          
             <div className='footer__container--contact-item'>            
               <FontAwesomeIcon icon={faMapMarkerAlt} className='contact-icon'/>
               <p>12654 Pacific St.</p>
@@ -39,8 +39,8 @@ class Footer extends Component {
           </div>   
 
           <div className='footer__container--contact'>
-            <p className='footer__container--contact-title'>Mantente conectado!</p>
-            <p className='footer__container--contact-socialtext'>Mantente conectado en nuestras redes sociales para saber todo sobre nuestros nuevos proyectos y vacantes.</p>
+            <p className='footer__container--contact-title'>Stay Connected!</p>
+            <p className='footer__container--contact-socialtext'>Stay connected in our social networks to know everything about our new projects and vacancies.</p>
             <div className='footer__container--contact-socialicons'>
               <a href='https://www.facebook.com/'><img src={facebook} alt='face-icon' className='social-icon'/></a>
               <a href='https://www.twitter.com/'><img src={twitter} alt='twitter-icon' className='social-icon social-icon-twitter'/></a>
@@ -56,7 +56,7 @@ class Footer extends Component {
         <div className='footer__copyright'>
           <div className='footer__container--contact-item'>            
             <FontAwesomeIcon icon={faLaptop} className='contact-icon'/>
-            <p className='footer__copyright--text'>&copy;Creado por <a href='https://github.com/KarinGarciaZ'>Oscar Jovanny Garcia Zepeda</a>. Derechos Reservados.</p>
+            <p className='footer__copyright--text'>&copy;Creado por <a href='https://github.com/KarinGarciaZ'>Oscar Jovanny Garcia Zepeda</a>. All rights reserved.</p>
             <a href='https://github.com/KarinGarciaZ'><img src={github} alt='linkedin-icon' className='social-icon'/></a>
           </div>
         </div>

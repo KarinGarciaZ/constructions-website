@@ -147,7 +147,7 @@ class Constructions extends Component {
     let title = '';
     if( constructions.length ) 
       title =  <div className='about-us__title'>
-                  <span className='about-us__title--text'>Nuestros Proyectos</span>
+                  <span className='about-us__title--text'>Our Projects</span>
                 </div>
 
     let content = this.state.loadedContent;
@@ -162,7 +162,7 @@ class Constructions extends Component {
         </div>
         break;
       case 'none':
-        loadContent = <NoData item='Construcciones con estas características.'/>
+        loadContent = <NoData item='constructions with these characteristics.'/>
         break;
     
       default:
@@ -174,7 +174,7 @@ class Constructions extends Component {
       <div className='constructions'>
         <Header { ...props } optionsIcon={true} iconClicked={this.onOptionsIconClick}/>
         {title}
-        <Sidebar elements={sidebarElements} changed={this.onChangeValue} title='Filtrar por:' sidebarDefault={this.state.sidebarDefault}/>
+        <Sidebar elements={sidebarElements} changed={this.onChangeValue} title='Filter By:' sidebarDefault={this.state.sidebarDefault}/>
         {loadContent}
       </div>
     )

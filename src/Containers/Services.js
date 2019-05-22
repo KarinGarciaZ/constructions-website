@@ -64,7 +64,7 @@ class Services extends Component {
       <div className='services-container'>
         <Header { ...props }/>
         { content === 'services'? <div className='about-us__title'>
-          <span className='about-us__title--text'>Nuestros servicios</span>
+          <span className='about-us__title--text'>Our Services</span>
         </div> : null}
         <div className='services-container__cards'>
           {loadContent}
